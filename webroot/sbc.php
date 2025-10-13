@@ -32,19 +32,47 @@ if (!function_exists('render_fragment')) {
 
 $matrix = json_decode(file_get_contents($matrixPath), true, flags: JSON_THROW_ON_ERROR);
 $latest = json_decode(file_get_contents($latestPath), true, flags: JSON_THROW_ON_ERROR);
+function layout_start(): bool
+{
+    $header = render_fragment('header.html');
+    if ($header !== '') {
+        echo $header;
+        return true;
+    }
+
+    echo "<!doctype html>\n";
+    echo "<html lang=\"en\">\n<head>\n";
+    echo "  <meta charset=\"utf-8\">\n";
+    echo "  <title>Raspberry Pi Prices</title>\n";
+    echo "  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n";
+    echo "  <link rel=\"stylesheet\" href=\"https://cdn.datatables.net/1.13.8/css/jquery.dataTables.min.css\">\n";
+    echo "  <link rel=\"stylesheet\" href=\"site.css\">\n";
+    echo "</head>\n<body class=\"scrapegoat-body\">\n";
+    echo "<main class=\"scrapegoat-fallback-main\">\n";
+    return false;
+}
+
+function layout_end(bool $customHeaderUsed): void
+{
+    $footer = render_fragment('footer.html');
+    if ($footer !== '') {
+        echo $footer;
+        return;
+    }
+
+    if (!$customHeaderUsed) {
+        echo "</main></body></html>";
+    }
+}
+
+$customHeaderUsed = layout_start();
+if ($customHeaderUsed) {
+    echo '<link rel="stylesheet" href="site.css" data-scrapegoat-css>';
+    echo '<link rel="stylesheet" href="https://cdn.datatables.net/1.13.8/css/jquery.dataTables.min.css" data-scrapegoat-css>';
+}
+$wrapperClasses = 'scrapegoat-wrapper' . ($customHeaderUsed ? ' scrapegoat-wrapper--embedded' : ' scrapegoat-wrapper--fallback');
 ?>
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Raspberry Pi Prices</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.8/css/jquery.dataTables.min.css">
-  <link rel="stylesheet" href="site.css">
-</head>
-<body>
-<?= render_fragment('header.html'); ?>
-<main class="container">
+<div class="<?= $wrapperClasses ?>">
   <header class="page-header">
     <h1>Raspberry Pi Price Tracker</h1>
     <p class="lede">Latest public Micro Center pricing for Raspberry Pi boards and kits. Updated when the local scraper runs.</p>
@@ -118,7 +146,7 @@ $latest = json_decode(file_get_contents($latestPath), true, flags: JSON_THROW_ON
       </tbody>
     </table>
   </section>
-</main>
+</div>
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="https://cdn.datatables.net/1.13.8/js/jquery.dataTables.min.js"></script>
@@ -131,6 +159,4 @@ $latest = json_decode(file_get_contents($latestPath), true, flags: JSON_THROW_ON
     });
   });
 </script>
-<?= render_fragment('footer.html'); ?>
-</body>
-</html>
+<?php layout_end($customHeaderUsed); ?>

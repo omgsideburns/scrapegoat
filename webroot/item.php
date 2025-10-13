@@ -36,19 +36,49 @@ if (!function_exists('render_fragment')) {
 
 $item = json_decode(file_get_contents($path), true, flags: JSON_THROW_ON_ERROR);
 $series = $item['series'] ?? [];
+function layout_start(string $pageTitle): bool
+{
+    $header = render_fragment('header.html');
+    if ($header !== '') {
+        echo $header;
+        return true;
+    }
+
+    echo "<!doctype html>\n";
+    echo "<html lang=\"en\">\n<head>\n";
+    echo "  <meta charset=\"utf-8\">\n";
+    echo "  <title>" . htmlspecialchars($pageTitle, ENT_QUOTES, 'UTF-8') . "</title>\n";
+    echo "  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n";
+    echo "  <link rel=\"stylesheet\" href=\"site.css\">\n";
+    echo "  <script src=\"https://cdn.jsdelivr.net/npm/chart.js@4\"></script>\n";
+    echo "</head>\n<body class=\"scrapegoat-body\">\n";
+    echo "<main class=\"scrapegoat-fallback-main\">\n";
+    return false;
+}
+
+function layout_end(bool $customHeaderUsed): void
+{
+    $footer = render_fragment('footer.html');
+    if ($footer !== '') {
+        echo $footer;
+        return;
+    }
+
+    if (!$customHeaderUsed) {
+        echo "</main></body></html>";
+    }
+}
+
+<?php
+$pageTitle = ($item['name'] ?? $sku) . ' price history';
+$customHeaderUsed = layout_start($pageTitle);
+if ($customHeaderUsed) {
+    echo '<link rel="stylesheet" href="site.css" data-scrapegoat-css>';
+    echo '<script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>';
+}
+$wrapperClasses = 'scrapegoat-wrapper' . ($customHeaderUsed ? ' scrapegoat-wrapper--embedded' : ' scrapegoat-wrapper--fallback');
 ?>
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title><?= htmlspecialchars(($item['name'] ?? $sku) . ' price history') ?></title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="site.css">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
-</head>
-<body>
-<?= render_fragment('header.html'); ?>
-<main class="container">
+<div class="<?= $wrapperClasses ?>">
   <header class="page-header">
     <h1><?= htmlspecialchars($item['name'] ?? $sku) ?></h1>
     <p class="lede">Historical Micro Center pricing for SKU <?= htmlspecialchars($item['sku'] ?? $sku) ?>.</p>
@@ -82,7 +112,7 @@ $series = $item['series'] ?? [];
       </tbody>
     </table>
   </section>
-</main>
+</div>
 
 <script>
 const series = <?= json_encode($series, JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP) ?>;
@@ -134,6 +164,4 @@ function addScatter(points, color, label) {
 addScatter(salePoints, '#e67e22', 'Sale');
 addScatter(lowPoints, '#2ecc71', 'All-time low');
 </script>
-<?= render_fragment('footer.html'); ?>
-</body>
-</html>
+<?php layout_end($customHeaderUsed); ?>

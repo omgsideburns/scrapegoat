@@ -11,6 +11,33 @@ body {
   color: #222;
 }
 
+.scrapegoat-body {
+  margin: 0;
+  background: #f7f7f7;
+  color: #222;
+}
+
+.scrapegoat-fallback-main {
+  min-height: 100vh;
+  padding: 2rem 1.5rem;
+}
+
+.scrapegoat-wrapper {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.scrapegoat-wrapper--embedded {
+  padding: 0;
+}
+
+.scrapegoat-wrapper--fallback {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+}
+
 .container {
   max-width: 1080px;
   margin: 0 auto;

@@ -277,18 +277,47 @@ function build_copy_text(array $section): string
     $lines[] = 'Source: https://xtonyx.org/scrapegoat/';
     return implode("\n", $lines);
 }
+
+function layout_start(): bool
+{
+    $header = render_fragment('header.html');
+    if ($header !== '') {
+        echo $header;
+        return true;
+    }
+
+    echo "<!doctype html>\n";
+    echo "<html lang=\"en\">\n<head>\n";
+    echo "  <meta charset=\"utf-8\">\n";
+    echo "  <title>Raspberry Pi Price Tables</title>\n";
+    echo "  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n";
+    echo "  <link rel=\"stylesheet\" href=\"site.css\">\n";
+    echo "</head>\n<body class=\"scrapegoat-body\">\n";
+    echo "<main class=\"scrapegoat-fallback-main\">\n";
+    return false;
+}
+
+function layout_end(bool $customHeaderUsed): void
+{
+    $footer = render_fragment('footer.html');
+    if ($footer !== '') {
+        echo $footer;
+        return;
+    }
+
+    if (!$customHeaderUsed) {
+        echo "</main></body></html>";
+    }
+}
 ?>
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Raspberry Pi Price Tables</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="site.css">
-</head>
-<body>
-<?= render_fragment('header.html'); ?>
-<main class="container">
+<?php
+$customHeaderUsed = layout_start();
+if ($customHeaderUsed) {
+    echo '<link rel="stylesheet" href="site.css" data-scrapegoat-css>';
+}
+$wrapperClasses = 'scrapegoat-wrapper' . ($customHeaderUsed ? ' scrapegoat-wrapper--embedded' : ' scrapegoat-wrapper--fallback');
+?>
+<div class="<?= $wrapperClasses ?>">
   <header class="page-header">
     <div>
       <?= render_intro($intro); ?>
@@ -304,11 +333,11 @@ function build_copy_text(array $section): string
       $tableHtml = build_table_html($section['headers'], $section['rows']);
       $notesHtml = render_notes($section['notes']);
       $copyText = build_copy_text($section);
+      $copyPayload = htmlspecialchars(base64_encode($copyText), ENT_QUOTES, 'UTF-8');
     ?>
     <section class="table-card">
       <div class="table-card__header">
         <h2><?= htmlspecialchars($section['title'], ENT_QUOTES, 'UTF-8') ?></h2>
-        <?php $copyPayload = htmlspecialchars(base64_encode($copyText), ENT_QUOTES, 'UTF-8'); ?>
         <button type="button" class="copy-btn" data-copy="<?= $copyPayload ?>">Copy markdown</button>
       </div>
       <div class="table-wrapper">
@@ -323,8 +352,7 @@ function build_copy_text(array $section): string
   <footer class="page-footer">
     <p>Need raw data or charts? <a href="https://github.com/omgsideburns/scrapegoat">Browse the repo on GitHub</a>.</p>
   </footer>
-</main>
-<?= render_fragment('footer.html'); ?>
+</div>
 
 <script>
   document.querySelectorAll('.copy-btn').forEach((button) => {
@@ -358,5 +386,4 @@ function build_copy_text(array $section): string
     });
   });
 </script>
-</body>
-</html>
+<?php layout_end($customHeaderUsed); ?>
