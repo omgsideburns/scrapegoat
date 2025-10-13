@@ -1,0 +1,12 @@
+{
+  "sku": "999003",
+  "name": "Raspberry Pi 400 Personal Computer Kit",
+  "series": [
+    {
+      "date": "2025-10-13",
+      "price": 99.99,
+      "is_sale": false,
+      "is_low": true
+    }
+  ]
+}

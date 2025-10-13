@@ -39,6 +39,7 @@ These are the prices at MicroCenter as of Oct 13 2025
 |$5.99|Buy In Store|[Link](https://www.microcenter.com/product/650109/raspberry-pi-pico-wh-pico-wireless-with-headers-soldered)|Raspberry Pi Pico WH - Pico Wireless with Headers Soldered;  RP2040 32-bit Cortex M0+ Dual Core Processor;  264KB RAM|
 |$5.99|Buy In Store|[Link](https://www.microcenter.com/product/687384/raspberry-pi-pico-2-w)|Raspberry Pi Pico 2 W|
 |$6.99|Buy In Store|[Link](https://www.microcenter.com/product/692334/raspberry-pi-pico-2w-with-header)|Raspberry Pi Pico 2W with Header|
+|$7.99|In Stock|[Link](https://www.microcenter.com/product/653129/raspberry-pi-pico-w-microcontroller)|Raspberry Pi Pico W|
 
 ### Raspberry Pi 400/500 Kits
 
@@ -47,6 +48,7 @@ These are the prices at MicroCenter as of Oct 13 2025
 |$59.99|Buy In Store|[Link](https://www.microcenter.com/product/633751/raspberry-pi-400-includes-raspbery-pi-400-with-4gb-ram,-micro-sd-card-slot,-2-usb-30-ports,-1-usb-20-port,-usb-c-power-required)|Raspberry Pi 400 - Includes Raspbery Pi 400 with 4GB Ram, Micro SD Card Slot, 2 USB 3.0 Ports, 1 USB 2.0 Port, USB C Power Required|
 |$89.99|Buy In Store|[Link](https://www.microcenter.com/product/631204/raspberry-pi-400-personal-computer-kit)|Raspberry Pi 400 Personal Computer Kit;  Broadcom BCM2711 Quad core Cortex-A72 (ARM v8) 64-bit SoC;  4GB RAM;  Built-in Keyboard|
 |$89.99|In Stock|[Link](https://www.microcenter.com/product/688716/raspberry-pi-500-unit-only)|Raspberry Pi 500 - Unit Only|
+|$99.99|In Stock|[Link](https://www.microcenter.com/product/630737/raspberry-pi-400-personal-computer-kit--us-keyboard-layout)|Raspberry Pi 400 Personal Computer Kit|
 |$119.99|In Stock|[Link](https://www.microcenter.com/product/688717/raspberry-pi-500-kit)|Raspberry Pi 500 Kit|
 |$179.99|Buy In Store|[Link](https://www.microcenter.com/product/699777/raspberry-pi-500-plus)|Raspberry Pi 500 PLUS|
 |$199.99|Buy In Store|[Link](https://www.microcenter.com/product/699778/raspberry-pi-raspberry-pi-500-plus-kit)|Raspberry Pi RASPBERRY PI 500 PLUS KIT|
@@ -96,33 +98,34 @@ These are the prices at MicroCenter as of Oct 13 2025
 
 |Price|Stock|Link|Description|
 |-:|:-|:-:|:-|
-|$3.99|In Stock|[Link](https://www.microcenter.com/product/690618/raspberry-pi-carbon-removal-credits)|Raspberry Pi Carbon Removal Credits|
 |$3.99|Buy In Store|[Link](https://www.microcenter.com/product/650107/raspberry-pi-pico-h-raspberry-pi-pico-with-headers-pre-installed)|Raspberry Pi Pico H - Raspberry Pi Pico with Headers Pre Installed;  RP2040 32-bit Cortex M0 Dual Core Processor;  264KB RAM|
-|$3.99|In Stock|[Link](https://www.microcenter.com/product/690852/raspberry-pi-mini-hdmi-male-to-hdmi-female-05-ft)|Raspberry Pi Mini HDMI Male to HDMI Female - 0.5 ft|
 |$3.99|In Stock|[Link](https://www.microcenter.com/product/683268/raspberry-pi-pico-2)|Raspberry Pi Pico 2;  Dual ARM Cortex M33 Processor;  520KB RAM|
-|$3.99|In Stock|[Link](https://www.microcenter.com/product/690853/raspberry-pi-white-mini-hdmi-to-hdmi-1-meter)|Raspberry Pi White Mini HDMI to HDMI - 1 meter|
+|$3.99|In Stock|[Link](https://www.microcenter.com/product/690618/raspberry-pi-carbon-removal-credits)|Raspberry Pi Carbon Removal Credits|
 |$3.99|In Stock|[Link](https://www.microcenter.com/product/687340/raspberry-pi-bumper)|Raspberry Pi Bumper|
-|$4.99|In Stock|[Link](https://www.microcenter.com/product/690850/raspberry-pi-white-hdmi-cable-2-meters)|Raspberry Pi White HDMI Cable - 2 meters|
+|$3.99|In Stock|[Link](https://www.microcenter.com/product/690852/raspberry-pi-mini-hdmi-male-to-hdmi-female-05-ft)|Raspberry Pi Mini HDMI Male to HDMI Female - 0.5 ft|
+|$3.99|In Stock|[Link](https://www.microcenter.com/product/690853/raspberry-pi-white-mini-hdmi-to-hdmi-1-meter)|Raspberry Pi White Mini HDMI to HDMI - 1 meter|
 |$4.99|Buy In Store|[Link](https://www.microcenter.com/product/650108/raspberry-pi-pico-w)|Raspberry Pi Pico W;  RP2040 32-bit Cortex M0+ Dual Core Processor;  264KB RAM|
+|$4.99|In Stock|[Link](https://www.microcenter.com/product/690850/raspberry-pi-white-hdmi-cable-2-meters)|Raspberry Pi White HDMI Cable - 2 meters|
 |$4.99|In Stock|[Link](https://www.microcenter.com/product/692333/raspberry-pi-pico-2-with-header)|Raspberry Pi Pico 2 with Header;  Dual ARM Cortex M33 Processor;  520KB RAM|
 |$5.99|Buy In Store|[Link](https://www.microcenter.com/product/687384/raspberry-pi-pico-2-w)|Raspberry Pi Pico 2 W|
-|$6.99|Buy In Store|[Link](https://www.microcenter.com/product/692334/raspberry-pi-pico-2w-with-header)|Raspberry Pi Pico 2W with Header|
 |$6.99|In Stock|[Link](https://www.microcenter.com/product/690851/raspberry-pi-micro-hdmi-male-to-hdmi-female-adapter-(23cm)-white)|Raspberry Pi Micro HDMI Male to HDMI Female Adapter (23cm) - White|
+|$6.99|Buy In Store|[Link](https://www.microcenter.com/product/692334/raspberry-pi-pico-2w-with-header)|Raspberry Pi Pico 2W with Header|
 |$7.99|In Stock|[Link](https://www.microcenter.com/product/613558/raspberry-pi-official-raspberry-pi-optical-usb-mouse-red-white)|Raspberry Pi Official Raspberry Pi Optical USB Mouse - Red/White|
+|$7.99|In Stock|[Link](https://www.microcenter.com/product/697848/raspberry-pi-mouse-2-(white))|Raspberry Pi Mouse 2 - (White)|
+|$7.99|In Stock|[Link](https://www.microcenter.com/product/653129/raspberry-pi-pico-w-microcontroller)|Raspberry Pi Pico W|
 |$7.99|In Stock|[Link](https://www.microcenter.com/product/613559/raspberry-pi-official-raspberry-pi-optical-usb-mouse-black-grey)|Raspberry Pi Official Raspberry Pi Optical USB Mouse - Black/Grey|
 |$7.99|In Stock|[Link](https://www.microcenter.com/product/608177/raspberry-pi-micro-hdmi-to-standard-hdmi-(a-m),-1m-cable)|Raspberry Pi Micro-HDMI to Standard HDMI (A/M), 1m cable|
-|$7.99|In Stock|[Link](https://www.microcenter.com/product/697848/raspberry-pi-mouse-2-(white))|Raspberry Pi Mouse 2 - (White)|
 |$9.99|In Stock|[Link](https://www.microcenter.com/product/627907/raspberry-pi-ceramic-mug)|Raspberry Pi Ceramic Mug|
 |$11.99|In Stock|[Link](https://www.microcenter.com/product/663804/raspberry-pi-debug-probe)|Raspberry Pi Debug Probe|
-|$14.99|Buy In Store|[Link](https://www.microcenter.com/product/697844/raspberry-pi-m2-hat-(compact))|Raspberry Pi M.2 HAT+ (Compact)|
 |$14.99|In Stock|[Link](https://www.microcenter.com/product/683363/raspberry-pi-usb-30-hub-usb-c)|Raspberry Pi USB 3.0 Hub USB C|
-|$16.99|In Stock|[Link](https://www.microcenter.com/product/613557/raspberry-pi-official-usb-keyboard-with-usb-hub-black-gray)|Raspberry Pi Official USB Keyboard with USB Hub - Black/Gray|
+|$14.99|Buy In Store|[Link](https://www.microcenter.com/product/697844/raspberry-pi-m2-hat-(compact))|Raspberry Pi M.2 HAT+ (Compact)|
 |$16.99|In Stock|[Link](https://www.microcenter.com/product/613556/raspberry-pi-official-usb-keyboard-with-usb-hub-red-white)|Raspberry Pi Official USB Keyboard with USB Hub - Red/White|
+|$16.99|In Stock|[Link](https://www.microcenter.com/product/613557/raspberry-pi-official-usb-keyboard-with-usb-hub-black-gray)|Raspberry Pi Official USB Keyboard with USB Hub - Black/Gray|
 |$24.99|In Stock|[Link](https://www.microcenter.com/product/671941/raspberry-pi-the-official-raspberry-pi-beginners-guide-how-to-use-your-new-computer)|Raspberry Pi The Official Raspberry Pi Beginner's Guide: How to use your new computer|
-|$29.99|In Stock|[Link](https://www.microcenter.com/product/681577/raspberry-pi-sense-hat)|Raspberry Pi Sense HAT|
 |$29.99|In Stock|[Link](https://www.microcenter.com/product/631851/raspberry-pi-digiamp)|Raspberry Pi DigiAMP|
+|$29.99|In Stock|[Link](https://www.microcenter.com/product/681577/raspberry-pi-sense-hat)|Raspberry Pi Sense HAT|
 |$37.99|In Stock|[Link](https://www.microcenter.com/product/662052/raspberry-pi-m12-lens)|Raspberry Pi M12 Lens;  12 Megapixel;  8mm;  Portrait Lens|
 |$39.99|In Stock|[Link](https://www.microcenter.com/product/662035/raspberry-pi-hq-lens-m12)|Raspberry Pi HQ Lens M12;  12 Megapixel;  Wide Angle Lens|
-|$54.99|In Stock|[Link](https://example.com/p1)|Raspberry Pi 4 4GB Board|
+|$54.99|In Stock|[Link](https://www.microcenter.com/product/622539/raspberry-pi-4-model-b-4gb-single-board-computer)|Raspberry Pi 4 4GB Board|
 |$69.99|In Stock|[Link](https://www.microcenter.com/product/687346/raspberry-pi-ai-hat-plus-13-tops)|Raspberry Pi AI Hat Plus 13 TOPS|
 |$109.99|In Stock|[Link](https://www.microcenter.com/product/687348/raspberry-pi-ai-hat-26-tops)|Raspberry Pi AI Hat 26 Tops|

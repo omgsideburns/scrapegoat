@@ -1014,7 +1014,7 @@
   {
     "sku":"999001",
     "name":"Raspberry Pi 4 4GB Board",
-    "url":"https:\/\/example.com\/p1",
+    "url":"https:\/\/www.microcenter.com\/product\/622539\/raspberry-pi-4-model-b-4gb-single-board-computer",
     "price":54.99,
     "stock":"In Stock",
     "availability":"In stock",
@@ -1025,12 +1025,34 @@
   {
     "sku":"999002",
     "name":"Raspberry Pi 5 8GB Board",
-    "url":"https:\/\/example.com\/p2",
+    "url":"https:\/\/www.microcenter.com\/product\/700975\/raspberry-pi-5-8gb-single-board-computer",
     "price":79.99,
     "stock":"Buy In Store",
     "availability":"In-Store Only",
     "model":"Pi 5",
     "memory_gb":8.0,
+    "brand":"Raspberry Pi"
+  },
+  {
+    "sku":"999003",
+    "name":"Raspberry Pi 400 Personal Computer Kit",
+    "url":"https:\/\/www.microcenter.com\/product\/630737\/raspberry-pi-400-personal-computer-kit--us-keyboard-layout",
+    "price":99.99,
+    "stock":"In Stock",
+    "availability":"In stock",
+    "model":"Pi 4",
+    "memory_gb":null,
+    "brand":"Raspberry Pi"
+  },
+  {
+    "sku":"999004",
+    "name":"Raspberry Pi Pico W",
+    "url":"https:\/\/www.microcenter.com\/product\/653129\/raspberry-pi-pico-w-microcontroller",
+    "price":7.99,
+    "stock":"In Stock",
+    "availability":"In stock",
+    "model":"Pico",
+    "memory_gb":null,
     "brand":"Raspberry Pi"
   }
 ]
