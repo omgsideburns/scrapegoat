@@ -530,6 +530,22 @@ def main():
         throttle=args.throttle,
     )
     if not rows:
+        fallback_path = os.environ.get(
+            "SCRAPER_FALLBACK",
+            "data/snapshots/_fallback_pi_brand.csv",
+        )
+        fallback = Path(fallback_path)
+        if fallback.exists():
+            try:
+                with fallback.open("r", encoding="utf-8") as f:
+                    reader = csv.DictReader(f)
+                    rows = [row for row in reader]
+                    print(
+                        f"[fallback] using {fallback} ({len(rows)} rows)",
+                        file=sys.stderr,
+                    )
+            except Exception as exc:
+                print(f"[fallback] failed to load {fallback}: {exc}", file=sys.stderr)
         if cache_dir and cache_dir.exists():
             cache_files = sorted(cache_dir.glob("*.html"))
             if cache_files:
