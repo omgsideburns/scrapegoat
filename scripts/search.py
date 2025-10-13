@@ -28,17 +28,22 @@ HEADERS_PRIMARY = {
     ),
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
     "Accept-Language": "en-US,en;q=0.9",
+    "Accept-Encoding": "gzip, deflate, br",
     "Cache-Control": "no-cache",
     "Pragma": "no-cache",
     "Upgrade-Insecure-Requests": "1",
     "Referer": "https://www.microcenter.com/search/search_results.aspx",
     "Connection": "keep-alive",
-}
-HEADERS_ALT = {
-    **HEADERS_PRIMARY,
+    "Sec-Ch-Ua": '"Google Chrome";v="127", "Chromium";v="127", "Not=A?Brand";v="24"',
+    "Sec-Ch-Ua-Mobile": "?0",
+    "Sec-Ch-Ua-Platform": '"macOS"',
     "Sec-Fetch-Site": "same-origin",
     "Sec-Fetch-Mode": "navigate",
     "Sec-Fetch-User": "?1",
+    "Sec-Fetch-Dest": "document",
+}
+HEADERS_ALT = {
+    **HEADERS_PRIMARY,
     "Sec-Fetch-Dest": "document",
 }
 SESSION = requests.Session()
