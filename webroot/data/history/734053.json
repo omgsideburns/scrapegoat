@@ -1,0 +1,12 @@
+{
+  "sku": "734053",
+  "name": "Raspberry Pi 5;  Broadcom BCM2712 Quad-Core Cortex-A76;  2GB LPDDR4X RAM",
+  "series": [
+    {
+      "date": "2025-10-13",
+      "price": 39.99,
+      "is_sale": false,
+      "is_low": true
+    }
+  ]
+}

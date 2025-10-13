@@ -1,0 +1,12 @@
+{
+  "sku": "783910",
+  "name": "Raspberry Pi 500 Kit",
+  "series": [
+    {
+      "date": "2025-10-13",
+      "price": 119.99,
+      "is_sale": false,
+      "is_low": true
+    }
+  ]
+}

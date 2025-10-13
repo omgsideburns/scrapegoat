@@ -1,0 +1,12 @@
+{
+  "sku": "620328",
+  "name": "Raspberry Pi 5 RTC Battery",
+  "series": [
+    {
+      "date": "2025-10-13",
+      "price": 4.99,
+      "is_sale": false,
+      "is_low": true
+    }
+  ]
+}

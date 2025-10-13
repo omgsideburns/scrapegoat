@@ -1,0 +1,12 @@
+{
+  "sku": "774075",
+  "name": "Raspberry Pi CM5 Development Kit",
+  "series": [
+    {
+      "date": "2025-10-13",
+      "price": 129.99,
+      "is_sale": false,
+      "is_low": true
+    }
+  ]
+}

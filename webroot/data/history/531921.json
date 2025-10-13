@@ -1,0 +1,12 @@
+{
+  "sku": "531921",
+  "name": "Raspberry Pi Camera 3 Wide NoIR",
+  "series": [
+    {
+      "date": "2025-10-13",
+      "price": 34.99,
+      "is_sale": false,
+      "is_low": true
+    }
+  ]
+}

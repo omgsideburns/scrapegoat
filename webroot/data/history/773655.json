@@ -1,0 +1,12 @@
+{
+  "sku": "773655",
+  "name": "Raspberry Pi 512GB NVME Kit",
+  "series": [
+    {
+      "date": "2025-10-13",
+      "price": 79.99,
+      "is_sale": false,
+      "is_low": true
+    }
+  ]
+}

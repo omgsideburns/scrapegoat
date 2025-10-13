@@ -1,0 +1,12 @@
+{
+  "sku": "999002",
+  "name": "Raspberry Pi 5 8GB Board",
+  "series": [
+    {
+      "date": "2025-10-12",
+      "price": 79.99,
+      "is_sale": false,
+      "is_low": true
+    }
+  ]
+}

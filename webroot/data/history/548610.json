@@ -1,0 +1,12 @@
+{
+  "sku": "548610",
+  "name": "Raspberry Pi Global Shutter Camera",
+  "series": [
+    {
+      "date": "2025-10-13",
+      "price": 55.99,
+      "is_sale": false,
+      "is_low": true
+    }
+  ]
+}

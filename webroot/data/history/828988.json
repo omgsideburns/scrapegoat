@@ -1,0 +1,12 @@
+{
+  "sku": "828988",
+  "name": "Raspberry Pi Pico 2 with Header;  Dual ARM Cortex M33 Processor;  520KB RAM",
+  "series": [
+    {
+      "date": "2025-10-13",
+      "price": 4.99,
+      "is_sale": false,
+      "is_low": true
+    }
+  ]
+}

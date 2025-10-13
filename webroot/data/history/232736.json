@@ -1,0 +1,12 @@
+{
+  "sku": "232736",
+  "name": "Raspberry Pi 400 - Includes Raspbery Pi 400 with 4GB Ram, Micro SD Card Slot, 2 USB 3.0 Ports, 1 USB 2.0 Port, USB C Power Required",
+  "series": [
+    {
+      "date": "2025-10-13",
+      "price": 59.99,
+      "is_sale": false,
+      "is_low": true
+    }
+  ]
+}

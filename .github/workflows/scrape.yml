@@ -5,6 +5,9 @@ on:
     - cron: "23 2 * * *" # daily 02:23 UTC; change to weekly if desired
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   run:
     runs-on: ubuntu-latest

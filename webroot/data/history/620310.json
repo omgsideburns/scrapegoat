@@ -1,0 +1,12 @@
+{
+  "sku": "620310",
+  "name": "Raspberry Pi 5 Active Cooler",
+  "series": [
+    {
+      "date": "2025-10-13",
+      "price": 9.99,
+      "is_sale": false,
+      "is_low": true
+    }
+  ]
+}

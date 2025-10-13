@@ -1,0 +1,12 @@
+{
+  "sku": "772558",
+  "name": "Raspberry Pi AI Hat Plus 13 TOPS",
+  "series": [
+    {
+      "date": "2025-10-13",
+      "price": 69.99,
+      "is_sale": false,
+      "is_low": true
+    }
+  ]
+}
