@@ -440,7 +440,11 @@ def scrape_listing(
     seen_urls = set()
     all_rows = []
 
-    final_url, html = get(url)
+    try:
+        final_url, html = get(url)
+    except Exception as exc:
+        print(f"[warn] initial fetch failed: {exc}", file=sys.stderr)
+        return []
     if cache_dir:
         saved = cache_save_html(cache_dir, "listing", final_url, html)
         print(f"[cache] listing -> {saved}")
@@ -455,7 +459,11 @@ def scrape_listing(
         seen_urls.add(purl)
 
         if purl != final_url:
-            _, ph = get(purl)
+            try:
+                _, ph = get(purl)
+            except Exception as exc:
+                print(f"[warn] fetch failed for {purl}: {exc}", file=sys.stderr)
+                continue
             if cache_dir:
                 saved = cache_save_html(cache_dir, f"listing_p{idx}", purl, ph)
                 print(f"[cache] listing page {idx} -> {saved}")
