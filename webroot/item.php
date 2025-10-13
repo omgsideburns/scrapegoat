@@ -15,6 +15,25 @@ if (!file_exists($path)) {
     exit;
 }
 
+$fragmentCache = [];
+if (!function_exists('render_fragment')) {
+    function render_fragment(string $file): string
+    {
+        static $cache = [];
+        if (isset($cache[$file])) {
+            return $cache[$file];
+        }
+        $path = __DIR__ . '/chrome/' . ltrim($file, '/');
+        if (is_file($path)) {
+            $cache[$file] = file_get_contents($path) ?: '';
+        } else {
+            $cache[$file] = '';
+        }
+        return $cache[$file];
+    }
+}
+
+
 $item = json_decode(file_get_contents($path), true, flags: JSON_THROW_ON_ERROR);
 $series = $item['series'] ?? [];
 ?>
@@ -28,8 +47,9 @@ $series = $item['series'] ?? [];
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
 </head>
 <body>
+<?= render_fragment('header.html'); ?>
 <main class="container">
-  <header>
+  <header class="page-header">
     <h1><?= htmlspecialchars($item['name'] ?? $sku) ?></h1>
     <p class="lede">Historical Micro Center pricing for SKU <?= htmlspecialchars($item['sku'] ?? $sku) ?>.</p>
     <p><a href="sbc.php">&larr; Back to Raspberry Pi listings</a></p>
@@ -114,5 +134,6 @@ function addScatter(points, color, label) {
 addScatter(salePoints, '#e67e22', 'Sale');
 addScatter(lowPoints, '#2ecc71', 'All-time low');
 </script>
+<?= render_fragment('footer.html'); ?>
 </body>
 </html>

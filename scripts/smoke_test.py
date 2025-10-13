@@ -11,12 +11,8 @@ import csv, datetime as dt, subprocess, sys
 ROOT = Path(__file__).resolve().parents[1]
 SNAP = ROOT / "data/snapshots"
 HIST = ROOT / "data/history/price_history.csv"
-CHARTS = ROOT / "charts"
-
-
 def main() -> None:
     SNAP.mkdir(parents=True, exist_ok=True)
-    CHARTS.mkdir(parents=True, exist_ok=True)
     today = dt.date.today().isoformat()
     snap_path = SNAP / f"{today}_pi_brand.csv"
 
@@ -50,8 +46,6 @@ def main() -> None:
         [sys.executable, "scripts/20_flags.py"],
         [sys.executable, "scripts/25_export_json.py"],
         [sys.executable, "scripts/26_build_markdown.py"],
-        [sys.executable, "scripts/30_charts_timeseries.py"],
-        [sys.executable, "scripts/31_chart_heatmap.py"],
     ]
     for cmd in cmds:
         subprocess.check_call(cmd, cwd=ROOT)
@@ -63,10 +57,6 @@ def main() -> None:
     assert sample_history.exists(), "per-SKU history missing"
     markdown_report = ROOT / "webroot/markdown/raspberry_pi.md"
     assert markdown_report.exists(), "markdown report missing"
-    # at least one chart
-    any_chart = any(CHARTS.glob("*.png"))
-    assert any_chart, "no charts generated"
-
     print("Smoke test passed.")
 
 

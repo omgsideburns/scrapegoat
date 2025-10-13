@@ -2,7 +2,7 @@
 
 Scrapegoat automates Raspberry Pi price tracking from Micro Center brand listings.  
 It scrapes the public catalog, stores raw snapshots, normalizes them into a history
-table, annotates price events, and renders PNG charts for quick visual inspection.
+table, annotates price events, and emits JSON/Markdown artifacts for quick publishing.
 
 ## Data flow
 
@@ -10,8 +10,6 @@ table, annotates price events, and renders PNG charts for quick visual inspectio
 - `scripts/10_merge_history.py` parses each snapshot, normalizes rows, and maintains `data/history/price_history.csv` (append-only, unique on `(date, sku)`).
 - `scripts/20_flags.py` annotates the history with rolling medians, sale flags, cumulative lows, and discount percentages; it also emits `data/history/price_flags.csv`.
 - `scripts/25_export_json.py` publishes JSON bundles under `webroot/data/` for the website (latest listings, board matrix, per-SKU histories).
-- `scripts/30_charts_timeseries.py` produces per-SKU time-series plots and stores them in `charts/<SKU>_history.png`.
-- `scripts/31_chart_heatmap.py` renders `charts/heatmap_model_memory.png`, a model × memory price matrix based on the latest data.
 - `scripts/26_build_markdown.py` assembles Markdown tables (SBC matrix plus power/camera/case/kit accessory tables when present) under `webroot/markdown/` for quick publishing.
 
 All files are UTF-8 CSV/PNG. Snapshots remain immutable; history grows monotonically.
@@ -29,15 +27,11 @@ python scripts/10_merge_history.py
 python scripts/20_flags.py
 python scripts/25_export_json.py
 python scripts/26_build_markdown.py
-
-# 3. Generate charts
-python scripts/30_charts_timeseries.py
-python scripts/31_chart_heatmap.py
 ```
 
 By default the scraper writes to `data/snapshots/<UTC-date>_pi_brand.csv`. Pass a different listing URL as the first argument (or a custom `--out` path) if you need to scrape another brand or store.
 
-Pipeline runs are idempotent: re-running generates the same history rows for existing snapshots and simply refreshes flags/charts.
+Pipeline runs are idempotent: re-running generates the same history rows for existing snapshots and simply refreshes downstream exports.
 
 ## Repository layout
 
@@ -47,7 +41,6 @@ data/
   history/              # normalized outputs
     price_history.csv   # append-only history, enriched by 20_flags.py
     price_flags.csv     # subset of rows flagged as sales or lows
-charts/                 # generated PNG artifacts
 webroot/
   data/                 # JSON exports consumed by the website
     history/            # per-SKU time series
@@ -61,17 +54,16 @@ scripts/
   20_flags.py           # rolling medians, sale/lows flags
   25_export_json.py     # website JSON exports
   26_build_markdown.py  # Markdown tables for site/blog
-  30_charts_timeseries.py
-  31_chart_heatmap.py
   smoke_test.py         # local integration test
   upload_site.py        # rsync helper (fill in host/user/path)
+webroot/chrome/         # optional header/footer fragments injected into PHP pages
 ```
 
 ## Automation (GitHub Actions)
 
 `.github/workflows/scrape.yml` provisions Python 3.11, runs the full pipeline daily,
 and commits updated artifacts (`data/snapshots/*.csv`, `data/history/*.csv`,
-`webroot/data/*.json`, `charts/*.png`). Set a `workflow_dispatch` run to verify
+`webroot/data/*.json`, `webroot/markdown/*.md`). Set a `workflow_dispatch` run to verify
 everything works in your fork.
 
 ## Website frontend

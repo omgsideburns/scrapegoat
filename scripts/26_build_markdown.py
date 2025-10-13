@@ -81,6 +81,51 @@ def _classify_board(name: str) -> Optional[str]:
     return None
 
 
+def _availability_status(stock: str, availability: str) -> str:
+    combined = f"{stock or ''} {availability or ''}".lower()
+    if any(keyword in combined for keyword in ("sold out", "out of stock")):
+        return "sold_out"
+    if any(
+        keyword in combined
+        for keyword in (
+            "in-store",
+            "instore",
+            "buy in store",
+            "pickup",
+            "in store only",
+            "store only",
+            "call store",
+        )
+    ):
+        return "store_only"
+    return "available"
+
+
+def _format_price_markdown(record: Optional[dict[str, object]]) -> str:
+    if not record:
+        return "x"
+    price = record.get("price")
+    if price is None or (isinstance(price, float) and math.isnan(price)):
+        return "x"
+    price_str = f"${float(price):.2f}"
+    status = record.get("status", "available")
+    if status == "sold_out":
+        return f"~~{price_str}~~"
+    if status == "store_only":
+        return f"*{price_str}*"
+    return price_str
+
+
+def _price_record_from_row(row: pd.Series) -> Optional[dict[str, object]]:
+    price = pd.to_numeric(row.get("price"), errors="coerce")
+    if pd.isna(price):
+        return None
+    return {
+        "price": float(price),
+        "status": _availability_status(row.get("stock", ""), row.get("availability", "")),
+    }
+
+
 def _memory_from_name(name: str) -> float:
     m = re.search(r"(512|1|2|4|8|16)\s*(GB|MB)", str(name), re.I)
     if not m:
@@ -122,9 +167,10 @@ def _build_board_tables(latest: pd.DataFrame) -> tuple[list[str], bool]:
     include_zero_note = False
 
     for title, columns in BOARD_GROUPS.items():
-        data = {
+        data: dict[tuple[str, str], Optional[dict[str, object]]] = {
             (label, board): None for label, _ in MEMORY_ORDER for board in columns
         }
+        status_seen: set[str] = set()
         for _, row in boards.iterrows():
             board = row["board"]
             if board not in columns:
@@ -137,13 +183,20 @@ def _build_board_tables(latest: pd.DataFrame) -> tuple[list[str], bool]:
                 continue
             key = (mem_label, board)
             current = data.get(key)
-            if current is None or price < current:
-                data[key] = float(price)
+            current_price = None if current is None else current.get("price")
+            if current is None or (current_price is not None and price < current_price) or current_price is None:
+                status = _availability_status(row.get("stock", ""), row.get("availability", ""))
+                data[key] = {
+                    "price": float(price),
+                    "status": status,
+                }
+                if status != "available":
+                    status_seen.add(status)
 
         used_columns = [
             col
             for col in columns
-            if any(data.get((label, col)) is not None for label, _ in MEMORY_ORDER)
+            if any(data.get((label, col)) for label, _ in MEMORY_ORDER)
         ]
         if not used_columns:
             continue
@@ -159,15 +212,30 @@ def _build_board_tables(latest: pd.DataFrame) -> tuple[list[str], bool]:
         for label, _mem in MEMORY_ORDER:
             cells = [label]
             for board in used_columns:
-                price = data.get((label, board))
-                cells.append(f"${price:.2f}" if price is not None else "x")
+                record = data.get((label, board))
+                cells.append(_format_price_markdown(record))
             rows.append("|" + "|".join(cells) + "|")
 
         include_zero_note = include_zero_note or any(
             col.startswith("Zero") for col in used_columns
         )
 
-        tables.append("\n".join([f"### {title}", "", header_line, align, *rows, ""]))
+        note_lines: list[str] = []
+        if status_seen:
+            parts = []
+            if "sold_out" in status_seen:
+                parts.append("~~price~~ = sold out/out of stock")
+            if "store_only" in status_seen:
+                parts.append("*price* = in-store only / pickup")
+            if parts:
+                note_lines.append("Key: " + "; ".join(parts) + ".")
+
+        block = [f"### {title}", "", header_line, align, *rows]
+        if note_lines:
+            block.append("")
+            block.extend(note_lines)
+        block.append("")
+        tables.append("\n".join(block))
 
     if not tables:
         return ["No Raspberry Pi board pricing available.\n"], False
@@ -214,6 +282,26 @@ def _extract_connector(name: str) -> str:
     return ""
 
 
+def _format_description(text: str, max_parts: int = 3) -> str:
+    raw = str(text or "")
+    parts = [p.strip() for p in raw.split(";") if p.strip()]
+    truncated = False
+    if len(parts) > max_parts:
+        parts = parts[:max_parts]
+        truncated = True
+    if not parts:
+        parts = [raw.strip()]
+    parts = [p.replace("|", "\|") for p in parts if p]
+    formatted = "<br>".join(parts)
+    if truncated:
+        formatted += "<br>…"
+    return formatted
+
+
+def _markdown_escape(value: str) -> str:
+    return value.replace("|", "\\|")
+
+
 def _build_power_table(latest: pd.DataFrame) -> tuple[str, bool]:
     power_df = latest[latest["name"].map(_is_power_product)].copy()
     if power_df.empty:
@@ -223,13 +311,13 @@ def _build_power_table(latest: pd.DataFrame) -> tuple[str, bool]:
     for _, row in power_df.sort_values("name").iterrows():
         power = _extract_power(str(row["name"]))
         connector = _extract_connector(str(row["name"]))
-        price = row.get("price")
-        price_text = f"${price:.2f}" if pd.notna(price) else ""
+        record = _price_record_from_row(row)
+        price_text = _format_price_markdown(record)
         url = row.get("url") or ""
         link = f"[Link]({url})" if url else ""
-        desc = row.get("name") or ""
+        desc = _format_description(row.get("name") or "")
         rows.append(
-            f"|{power}|{connector}|{price_text}|{link}|{desc}|"
+            f"|{_markdown_escape(power)}|{_markdown_escape(connector)}|{price_text}|{link}|{desc}|"
         )
     return "\n".join(rows), True
 
@@ -240,16 +328,16 @@ def _build_simple_table(title: str, df: pd.DataFrame) -> Optional[str]:
 
     lines = [f"### {title}", "", "|Price|Stock|Link|Description|", "|-:|:-|:-:|:-|"]
     for _, row in df.sort_values("price", na_position="last").iterrows():
-        price = row.get("price")
-        price_text = f"${price:.2f}" if pd.notna(price) else ""
+        record = _price_record_from_row(row)
+        price_text = _format_price_markdown(record)
         stock_val = row.get("stock")
         if pd.isna(stock_val) or not stock_val:
             stock_val = row.get("availability")
         stock = "" if pd.isna(stock_val) or stock_val is None else str(stock_val)
         url = row.get("url") or ""
         link = f"[Link]({url})" if url else ""
-        desc = row.get("name") or ""
-        lines.append(f"|{price_text}|{stock}|{link}|{desc}|")
+        desc = _format_description(row.get("name") or "")
+        lines.append(f"|{price_text}|{_markdown_escape(stock)}|{link}|{desc}|")
     lines.append("")
     return "\n".join(lines)
 
@@ -277,16 +365,16 @@ def _build_accessory_tables(latest: pd.DataFrame) -> list[str]:
 
         lines = [f"### {category}", "", "|Price|Stock|Link|Description|", "|-:|:-|:-:|:-|"]
         for _, row in group.sort_values("price", na_position="last").iterrows():
-            price = row.get("price")
-            price_text = f"${price:.2f}" if pd.notna(price) else ""
+            record = _price_record_from_row(row)
+            price_text = _format_price_markdown(record)
             stock_val = row.get("stock")
             if pd.isna(stock_val) or not stock_val:
                 stock_val = row.get("availability")
             stock = "" if pd.isna(stock_val) or stock_val is None else str(stock_val)
             url = row.get("url") or ""
             link = f"[Link]({url})" if url else ""
-            desc = row.get("name") or ""
-            lines.append(f"|{price_text}|{stock}|{link}|{desc}|")
+            desc = _format_description(row.get("name") or "")
+            lines.append(f"|{price_text}|{_markdown_escape(stock)}|{link}|{desc}|")
         lines.append("")
         tables.append("\n".join(lines))
 

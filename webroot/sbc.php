@@ -11,6 +11,25 @@ if (!file_exists($matrixPath) || !file_exists($latestPath)) {
     exit;
 }
 
+$fragmentCache = [];
+if (!function_exists('render_fragment')) {
+    function render_fragment(string $file): string
+    {
+        static $cache = [];
+        if (isset($cache[$file])) {
+            return $cache[$file];
+        }
+        $path = __DIR__ . '/chrome/' . ltrim($file, '/');
+        if (is_file($path)) {
+            $cache[$file] = file_get_contents($path) ?: '';
+        } else {
+            $cache[$file] = '';
+        }
+        return $cache[$file];
+    }
+}
+
+
 $matrix = json_decode(file_get_contents($matrixPath), true, flags: JSON_THROW_ON_ERROR);
 $latest = json_decode(file_get_contents($latestPath), true, flags: JSON_THROW_ON_ERROR);
 ?>
@@ -24,10 +43,14 @@ $latest = json_decode(file_get_contents($latestPath), true, flags: JSON_THROW_ON
   <link rel="stylesheet" href="site.css">
 </head>
 <body>
+<?= render_fragment('header.html'); ?>
 <main class="container">
-  <header>
+  <header class="page-header">
     <h1>Raspberry Pi Price Tracker</h1>
     <p class="lede">Latest public Micro Center pricing for Raspberry Pi boards and kits. Updated when the local scraper runs.</p>
+    <nav class="nav-links">
+      <a href="index.php">Markdown tables</a>
+    </nav>
   </header>
 
   <section>
@@ -108,5 +131,6 @@ $latest = json_decode(file_get_contents($latestPath), true, flags: JSON_THROW_ON
     });
   });
 </script>
+<?= render_fragment('footer.html'); ?>
 </body>
 </html>
