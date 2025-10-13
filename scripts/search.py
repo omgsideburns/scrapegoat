@@ -12,7 +12,7 @@ Usage:
     --out pi_brand.csv --pages 1 --cache-dir cache --cache-tiles
 """
 
-import argparse, csv, hashlib, json, os, random, re, sys, time, urllib.parse
+import argparse, csv, hashlib, json, os, random, re, subprocess, sys, time, urllib.parse
 from datetime import datetime
 from pathlib import Path
 
@@ -57,6 +57,27 @@ def _attempt_get(url, headers, timeout=30):
     r.raise_for_status()
     return r.url, r.text
 
+def _curl_fetch(url: str, headers: dict[str, str], timeout: int = 30):
+    header_args: list[str] = []
+    for key, value in headers.items():
+        header_args.extend(["-H", f"{key}: {value}"])
+    cmd = [
+        "curl",
+        "--silent",
+        "--show-error",
+        "--location",
+        "--compressed",
+        "--max-time",
+        str(timeout),
+        *header_args,
+        url,
+    ]
+    try:
+        result = subprocess.run(cmd, check=True, capture_output=True, text=True)
+        return url, result.stdout
+    except subprocess.CalledProcessError as exc:
+        raise requests.HTTPError(f"curl failed for {url}: {exc.stderr}") from exc
+
 
 def get(url):
     """
@@ -99,12 +120,19 @@ def get(url):
             backoff = throttle * (attempt ** 1.3)
             time.sleep(backoff)
 
-    if isinstance(last_err, requests.HTTPError) and last_err.response is not None:
-        code = last_err.response.status_code
-        text = last_err.response.text[:300].replace("\n", " ")
-        raise requests.HTTPError(
-            f"{code} for {last_err.response.url} :: {text}"
-        ) from last_err
+    if isinstance(last_err, requests.HTTPError):
+        if getattr(last_err, "response", None) is not None:
+            code = last_err.response.status_code
+            if code == 403:
+                try:
+                    print("[warning] 403 encountered, retrying with curl fallback")
+                    return _curl_fetch(url, HEADERS_PRIMARY)
+                except requests.HTTPError as curl_err:
+                    last_err = curl_err
+            text = last_err.response.text[:300].replace("\n", " ")
+            raise requests.HTTPError(
+                f"{code} for {last_err.response.url} :: {text}"
+            ) from last_err
     raise last_err or RuntimeError("Unknown fetch error")
 
 
