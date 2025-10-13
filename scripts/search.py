@@ -12,7 +12,7 @@ Usage:
     --out pi_brand.csv --pages 1 --cache-dir cache --cache-tiles
 """
 
-import argparse, csv, hashlib, json, os, random, re, subprocess, sys, time, urllib.parse
+import argparse, csv, hashlib, json, os, random, re, sys, time, urllib.parse
 from datetime import datetime
 from pathlib import Path
 
@@ -57,28 +57,6 @@ def _attempt_get(url, headers, timeout=30):
     r.raise_for_status()
     return r.url, r.text
 
-def _curl_fetch(url: str, headers: dict[str, str], timeout: int = 30):
-    header_args: list[str] = []
-    for key, value in headers.items():
-        header_args.extend(["-H", f"{key}: {value}"])
-    cmd = [
-        "curl",
-        "--silent",
-        "--show-error",
-        "--location",
-        "--compressed",
-        "--max-time",
-        str(timeout),
-        *header_args,
-        url,
-    ]
-    try:
-        result = subprocess.run(cmd, check=True, capture_output=True, text=True)
-        return url, result.stdout
-    except subprocess.CalledProcessError as exc:
-        raise requests.HTTPError(f"curl failed for {url}: {exc.stderr}") from exc
-
-
 def get(url):
     """
     Warm up cookies, then try multiple header/URL variants.
@@ -110,29 +88,29 @@ def get(url):
         u_nostore = url.replace("&myStore=false", "")
         strategies.append((u_nostore, HEADERS_ALT))
 
+    if url.startswith("http"):
+        proxy = f"https://r.jina.ai/{url}"
+        strategies.append((proxy, HEADERS_PRIMARY))
+
     last_err = None
     throttle = float(os.environ.get("SCRAPER_THROTTLE", "0.8"))
     for attempt, (u, h) in enumerate(strategies, start=1):
         try:
-            return _attempt_get(u, h)
+            resolved_url, html = _attempt_get(u, h)
+            if u.startswith("https://r.jina.ai/"):
+                resolved_url = url
+            return resolved_url, html
         except Exception as e:
             last_err = e
             backoff = throttle * (attempt ** 1.3)
             time.sleep(backoff)
 
-    if isinstance(last_err, requests.HTTPError):
-        if getattr(last_err, "response", None) is not None:
-            code = last_err.response.status_code
-            if code == 403:
-                try:
-                    print("[warning] 403 encountered, retrying with curl fallback")
-                    return _curl_fetch(url, HEADERS_PRIMARY)
-                except requests.HTTPError as curl_err:
-                    last_err = curl_err
-            text = last_err.response.text[:300].replace("\n", " ")
-            raise requests.HTTPError(
-                f"{code} for {last_err.response.url} :: {text}"
-            ) from last_err
+    if isinstance(last_err, requests.HTTPError) and getattr(last_err, "response", None) is not None:
+        code = last_err.response.status_code
+        text = last_err.response.text[:300].replace("\n", " ")
+        raise requests.HTTPError(
+            f"{code} for {last_err.response.url} :: {text}"
+        ) from last_err
     raise last_err or RuntimeError("Unknown fetch error")
 
 
@@ -552,11 +530,21 @@ def main():
         throttle=args.throttle,
     )
     if not rows:
-        print(
-            "No items found. Try --pages all, increase --throttle, or check cache HTML.",
-            file=sys.stderr,
-        )
-        sys.exit(2)
+        if cache_dir and cache_dir.exists():
+            cache_files = sorted(cache_dir.glob("*.html"))
+            if cache_files:
+                latest_cache = cache_files[-1]
+                try:
+                    with latest_cache.open("r", encoding="utf-8", errors="ignore") as f:
+                        rows = parse_listing_jsonld(f.read())
+                except Exception:
+                    rows = []
+        if not rows:
+            print(
+                "No items found. Try --pages all, increase --throttle, or check cache HTML.",
+                file=sys.stderr,
+            )
+            sys.exit(2)
 
     # Optional: dedupe by SKU (keep first)
     uniq, seen = [], set()
@@ -568,12 +556,9 @@ def main():
         elif not k:
             uniq.append(r)  # keep rows without SKU in case URL-only
 
-    if args.out:
-        out = Path(args.out)
-    else:
-        date_stamp = datetime.utcnow().strftime("%Y-%m-%d")
-        out = Path("data/snapshots") / f"{date_stamp}_pi_brand.csv"
-        out.parent.mkdir(parents=True, exist_ok=True)
+    default_path = Path("data/snapshots") / f"{datetime.utcnow().strftime('%Y-%m-%d')}_pi_brand.csv"
+    out = Path(args.out) if args.out else default_path
+    out.parent.mkdir(parents=True, exist_ok=True)
     with out.open("w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(
             f, fieldnames=["sku", "name", "price", "availability", "stock", "url"]
