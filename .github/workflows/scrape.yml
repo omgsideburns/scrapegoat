@@ -27,10 +27,12 @@ jobs:
           python scripts/search.py "https://www.microcenter.com/search/search_results.aspx?fq=brand:Raspberry+Pi&sortby=match&rpp=96&myStore=false" \
             --out "data/snapshots/${DATE}_pi_brand.csv" --pages 1
 
-      - name: Merge, flag, chart
+      - name: Merge, flag, export, chart
         run: |
           python scripts/10_merge_history.py
           python scripts/20_flags.py
+          python scripts/25_export_json.py
+          python scripts/26_build_markdown.py
           python scripts/30_charts_timeseries.py
           python scripts/31_chart_heatmap.py
 
@@ -38,6 +40,6 @@ jobs:
         run: |
           git config user.name "pricebot"
           git config user.email "pricebot@users.noreply.github.com"
-          git add data/snapshots/*.csv data/history/price_history.csv charts/*
+          git add data/snapshots/*.csv data/history/price_history.csv data/history/price_flags.csv charts/* webroot/data/*.json webroot/data/history/*.json webroot/markdown/*.md
           git commit -m "Automated price update $(date -u +%F)" || echo "No changes"
           git push

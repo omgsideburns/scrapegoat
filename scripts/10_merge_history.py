@@ -38,8 +38,14 @@ def _extract_model(name: str) -> str:
 
 
 def _extract_mem_gb(name: str) -> float | None:
-    m = re.search(r"\b(2|4|8|16)\s*GB\b", name or "", re.I)
-    return float(m.group(1)) if m else None
+    m = re.search(r"\b(512|1|2|4|8|16)\s*(GB|MB)\b", name or "", re.I)
+    if not m:
+        return None
+    amount = float(m.group(1))
+    unit = m.group(2).lower()
+    if unit == "mb":
+        return round(amount / 1024, 3)
+    return amount
 
 
 def _normalize_price(series: pd.Series) -> pd.Series:

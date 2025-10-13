@@ -102,6 +102,10 @@ def get(url):
 
 
 # ---------- Helpers ----------
+DEFAULT_BRAND_URL = (
+    "https://www.microcenter.com/search/search_results.aspx?"
+    "fq=brand:Raspberry+Pi&sortby=match&rpp=96&myStore=false"
+)
 BASE = "https://www.microcenter.com"
 SKU_RE = re.compile(r"\bSKU:\s*([0-9]+)\b", re.I)
 PRICE_RE = re.compile(r"\$\s*([0-9][0-9,]*(?:\.[0-9]{2})?)")
@@ -472,8 +476,19 @@ def scrape_listing(
 # ---------- CLI ----------
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("url", help="Brand search URL (e.g., Raspberry Pi listing)")
-    ap.add_argument("--out", default="items.csv", help="Output CSV path")
+    ap.add_argument(
+        "url",
+        nargs="?",
+        default=DEFAULT_BRAND_URL,
+        help="Brand search URL (default: Micro Center Raspberry Pi listing)",
+    )
+    ap.add_argument(
+        "--out",
+        help=(
+            "Output CSV path. Defaults to data/snapshots/<DATE>_pi_brand.csv when "
+            "not provided."
+        ),
+    )
     ap.add_argument(
         "--pages",
         default="1",
@@ -518,7 +533,12 @@ def main():
         elif not k:
             uniq.append(r)  # keep rows without SKU in case URL-only
 
-    out = Path(args.out)
+    if args.out:
+        out = Path(args.out)
+    else:
+        date_stamp = datetime.utcnow().strftime("%Y-%m-%d")
+        out = Path("data/snapshots") / f"{date_stamp}_pi_brand.csv"
+        out.parent.mkdir(parents=True, exist_ok=True)
     with out.open("w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(
             f, fieldnames=["sku", "name", "price", "availability", "stock", "url"]

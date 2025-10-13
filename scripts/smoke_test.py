@@ -48,6 +48,8 @@ def main() -> None:
     cmds = [
         [sys.executable, "scripts/10_merge_history.py"],
         [sys.executable, "scripts/20_flags.py"],
+        [sys.executable, "scripts/25_export_json.py"],
+        [sys.executable, "scripts/26_build_markdown.py"],
         [sys.executable, "scripts/30_charts_timeseries.py"],
         [sys.executable, "scripts/31_chart_heatmap.py"],
     ]
@@ -55,6 +57,12 @@ def main() -> None:
         subprocess.check_call(cmd, cwd=ROOT)
 
     assert HIST.exists(), "history not created"
+    latest_json = ROOT / "webroot/data/latest.json"
+    assert latest_json.exists(), "latest.json not exported"
+    sample_history = ROOT / "webroot/data/history/999001.json"
+    assert sample_history.exists(), "per-SKU history missing"
+    markdown_report = ROOT / "webroot/markdown/raspberry_pi.md"
+    assert markdown_report.exists(), "markdown report missing"
     # at least one chart
     any_chart = any(CHARTS.glob("*.png"))
     assert any_chart, "no charts generated"
