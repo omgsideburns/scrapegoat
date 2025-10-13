@@ -12,7 +12,7 @@ Usage:
     --out pi_brand.csv --pages 1 --cache-dir cache --cache-tiles
 """
 
-import argparse, csv, hashlib, json, re, sys, time, urllib.parse
+import argparse, csv, hashlib, json, os, random, re, sys, time, urllib.parse
 from datetime import datetime
 from pathlib import Path
 
@@ -90,12 +90,14 @@ def get(url):
         strategies.append((u_nostore, HEADERS_ALT))
 
     last_err = None
-    for u, h in strategies:
+    throttle = float(os.environ.get("SCRAPER_THROTTLE", "0.8"))
+    for attempt, (u, h) in enumerate(strategies, start=1):
         try:
             return _attempt_get(u, h)
         except Exception as e:
             last_err = e
-            time.sleep(0.6)
+            backoff = throttle * (attempt ** 1.3)
+            time.sleep(backoff)
 
     if isinstance(last_err, requests.HTTPError) and last_err.response is not None:
         code = last_err.response.status_code

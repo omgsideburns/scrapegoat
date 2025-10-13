@@ -24,7 +24,7 @@ jobs:
         run: |
           DATE=$(date -u +%F)
           mkdir -p data/snapshots
-          python scripts/search.py "https://www.microcenter.com/search/search_results.aspx?fq=brand:Raspberry+Pi&sortby=match&rpp=96&myStore=false" \
+          SCRAPER_THROTTLE=1.5 python scripts/search.py "https://www.microcenter.com/search/search_results.aspx?fq=brand:Raspberry+Pi&sortby=match&rpp=96&myStore=false" \
             --out "data/snapshots/${DATE}_pi_brand.csv" --pages 1
 
       - name: Merge, flag, export, chart
