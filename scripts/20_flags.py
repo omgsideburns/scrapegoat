@@ -24,10 +24,12 @@ def main() -> None:
     def per_sku(g: pd.DataFrame) -> pd.DataFrame:
         g = g.copy()
         g["date_dt"] = pd.to_datetime(g["date"], errors="coerce")
-        g = g.sort_values("date_dt")
-        g["rolling_median"] = (
-            g.rolling(window="30D", on="date_dt", min_periods=3)["price"].median()
-        )
+        g = g.loc[g["date_dt"].notna()].sort_values("date_dt")
+        if g.empty:
+            return g.drop(columns=["date_dt"])
+
+        g = g.set_index("date_dt")
+        g["rolling_median"] = g["price"].rolling("30D", min_periods=3).median()
         g["ever_min"] = g["price"].cummin()
         # sale flag
         g["is_sale"] = (
@@ -42,6 +44,7 @@ def main() -> None:
         pct = (1.0 - g["price"] / denom).clip(lower=0)
         pct = pct.where(denom.notna())
         g["pct_off"] = pct.round(3)
+        g = g.reset_index().rename(columns={"date_dt": "date_dt"})
         g = g.drop(columns=["date_dt"])
         return g
 
