@@ -77,7 +77,7 @@ $wrapperClasses = 'scrapegoat-wrapper' . ($customHeaderUsed ? ' scrapegoat-wrapp
     <h1>Raspberry Pi Price Tracker</h1>
     <p class="lede">Latest public Micro Center pricing for Raspberry Pi boards and kits. Updated when the local scraper runs.</p>
     <nav class="nav-links">
-      <a href="index.php">Markdown tables</a>
+      <a href="tables.php">Markdown tables</a>
     </nav>
   </header>
 

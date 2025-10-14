@@ -8,7 +8,6 @@ if (!file_exists($markdownPath)) {
     exit;
 }
 
-$fragmentCache = [];
 if (!function_exists('render_fragment')) {
     function render_fragment(string $file): string
     {
@@ -24,6 +23,27 @@ if (!function_exists('render_fragment')) {
         }
         return $cache[$file];
     }
+}
+
+function fallback_header_html(): string
+{
+    return <<<'HTML'
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Raspberry Pi Price Tables</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="site.css">
+</head>
+<body class="scrapegoat-body">
+<main class="scrapegoat-fallback-main">
+HTML;
+}
+
+function fallback_footer_html(): string
+{
+    return "</main></body></html>";
 }
 
 
@@ -277,45 +297,22 @@ function build_copy_text(array $section): string
     $lines[] = 'Source: https://xtonyx.org/scrapegoat/';
     return implode("\n", $lines);
 }
-
-function layout_start(): bool
-{
-    $header = render_fragment('header.html');
-    if ($header !== '') {
-        echo $header;
-        return true;
-    }
-
-    echo "<!doctype html>\n";
-    echo "<html lang=\"en\">\n<head>\n";
-    echo "  <meta charset=\"utf-8\">\n";
-    echo "  <title>Raspberry Pi Price Tables</title>\n";
-    echo "  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n";
-    echo "  <link rel=\"stylesheet\" href=\"site.css\">\n";
-    echo "</head>\n<body class=\"scrapegoat-body\">\n";
-    echo "<main class=\"scrapegoat-fallback-main\">\n";
-    return false;
-}
-
-function layout_end(bool $customHeaderUsed): void
-{
-    $footer = render_fragment('footer.html');
-    if ($footer !== '') {
-        echo $footer;
-        return;
-    }
-
-    if (!$customHeaderUsed) {
-        echo "</main></body></html>";
-    }
-}
 ?>
 <?php
-$customHeaderUsed = layout_start();
-if ($customHeaderUsed) {
+$headerHtml = render_fragment('header.html');
+$footerHtml = render_fragment('footer.html');
+$usingChromeFragments = ($headerHtml !== '' && $footerHtml !== '');
+
+if (!$usingChromeFragments) {
+    $headerHtml = fallback_header_html();
+    $footerHtml = fallback_footer_html();
+}
+
+echo $headerHtml;
+if ($usingChromeFragments) {
     echo '<link rel="stylesheet" href="site.css" data-scrapegoat-css>';
 }
-$wrapperClasses = 'scrapegoat-wrapper' . ($customHeaderUsed ? ' scrapegoat-wrapper--embedded' : ' scrapegoat-wrapper--fallback');
+$wrapperClasses = 'scrapegoat-wrapper' . ($usingChromeFragments ? ' scrapegoat-wrapper--embedded' : ' scrapegoat-wrapper--fallback');
 ?>
 <div class="<?= $wrapperClasses ?>">
   <header class="page-header">
@@ -386,4 +383,6 @@ $wrapperClasses = 'scrapegoat-wrapper' . ($customHeaderUsed ? ' scrapegoat-wrapp
     });
   });
 </script>
-<?php layout_end($customHeaderUsed); ?>
+<?php
+echo $footerHtml;
+?>

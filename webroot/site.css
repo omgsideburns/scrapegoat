@@ -1,28 +1,22 @@
-:root {
-  color-scheme: light dark;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  line-height: 1.5;
-}
-
-body {
+body.scrapegoat-body {
   margin: 0;
   padding: 0;
   background: #f7f7f7;
   color: #222;
-}
-
-.scrapegoat-body {
-  margin: 0;
-  background: #f7f7f7;
-  color: #222;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.5;
 }
 
 .scrapegoat-fallback-main {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.5;
   min-height: 100vh;
   padding: 2rem 1.5rem;
 }
 
 .scrapegoat-wrapper {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.5;
   max-width: 1080px;
   margin: 0 auto;
   padding: 1.5rem;
@@ -46,63 +40,63 @@ body {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
 }
 
-.page-header {
+.scrapegoat-wrapper .page-header {
   margin-bottom: 2rem;
 }
 
-.page-header h1,
-.page-header h2 {
+.scrapegoat-wrapper .page-header h1,
+.scrapegoat-wrapper .page-header h2 {
   margin: 0 0 0.5rem;
 }
 
-.lede {
+.scrapegoat-wrapper .lede {
   color: #555;
 }
 
-.nav-links {
+.scrapegoat-wrapper .nav-links {
   display: flex;
   gap: 0.75rem;
   flex-wrap: wrap;
   margin-top: 0.75rem;
 }
 
-.nav-links a {
+.scrapegoat-wrapper .nav-links a {
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: #555;
 }
 
-.table-wrapper {
+.scrapegoat-wrapper .table-wrapper {
   overflow-x: auto;
 }
 
-table {
+.scrapegoat-wrapper table {
   width: 100%;
   border-collapse: collapse;
 }
 
-table.grid th,
-table.grid td {
+.scrapegoat-wrapper table.grid th,
+.scrapegoat-wrapper table.grid td {
   border: 1px solid #dcdcdc;
   padding: 0.4rem 0.6rem;
   text-align: center;
 }
 
-table.grid th {
+.scrapegoat-wrapper table.grid th {
   background: #f0f0f0;
   font-weight: 600;
 }
 
-.markdown-table th,
-.markdown-table td {
+.scrapegoat-wrapper .markdown-table th,
+.scrapegoat-wrapper .markdown-table td {
   text-align: left;
   vertical-align: top;
   white-space: normal;
   word-break: break-word;
 }
 
-.table-card {
+.scrapegoat-wrapper .table-card {
   border: 1px solid #e0e0e0;
   border-radius: 8px;
   padding: 1rem;
@@ -110,7 +104,7 @@ table.grid th {
   background: #fafafa;
 }
 
-.table-card__header {
+.scrapegoat-wrapper .table-card__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -118,12 +112,12 @@ table.grid th {
   margin-bottom: 0.75rem;
 }
 
-.table-card__header h2 {
+.scrapegoat-wrapper .table-card__header h2 {
   margin: 0;
   font-size: 1.3rem;
 }
 
-.copy-btn {
+.scrapegoat-wrapper .copy-btn {
   border: none;
   background: #005fcc;
   color: #fff;
@@ -134,28 +128,28 @@ table.grid th {
   transition: background 0.2s ease;
 }
 
-.copy-btn:hover,
-.copy-btn:focus {
+.scrapegoat-wrapper .copy-btn:hover,
+.scrapegoat-wrapper .copy-btn:focus {
   background: #0c77f5;
 }
 
-.table-notes {
+.scrapegoat-wrapper .table-notes {
   margin-top: 0.6rem;
   font-size: 0.85rem;
   color: #555;
 }
 
-.note-text {
+.scrapegoat-wrapper .note-text {
   margin: 0.2rem 0;
 }
 
-.page-footer {
+.scrapegoat-wrapper .page-footer {
   margin-top: 3rem;
   font-size: 0.9rem;
   color: #555;
 }
 
-.page-footer a {
+.scrapegoat-wrapper .page-footer a {
   color: inherit;
   text-decoration: underline;
 }
