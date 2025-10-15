@@ -55,6 +55,17 @@
     "brand":"Raspberry Pi"
   },
   {
+    "sku":"278523",
+    "name":"Raspberry Pi 4 Model B;  Broadcom BCM2711 Quad core Cortex-A72 (ARM v8) 64-bit SoC;  4GB DDR4 RAM",
+    "url":"https:\/\/www.microcenter.com\/product\/637834\/raspberry-pi-4-model-b",
+    "price":54.99,
+    "stock":"Buy In Store",
+    "availability":"Buy In Store",
+    "model":"Pi 4",
+    "memory_gb":4.0,
+    "brand":"Raspberry Pi"
+  },
+  {
     "sku":"334904",
     "name":"Raspberry Pi Zero 2 W;  ARM Cortex A53 Quad Core Processor;  512MB LPDDR2 RAM",
     "url":"https:\/\/www.microcenter.com\/product\/643085\/raspberry-pi-zero-2-w",
@@ -180,8 +191,8 @@
     "name":"Raspberry Pi Camera 3 Wide",
     "url":"https:\/\/www.microcenter.com\/product\/662018\/raspberry-pi-camera-3-wide",
     "price":34.99,
-    "stock":"Buy In Store",
-    "availability":"In-Store Pickup",
+    "stock":"In Stock",
+    "availability":"Usually ships",
     "model":"Accessory",
     "memory_gb":null,
     "brand":"Raspberry Pi"
@@ -261,6 +272,17 @@
     "availability":"Buy In Store",
     "model":"Pi 4",
     "memory_gb":1.0,
+    "brand":"Raspberry Pi"
+  },
+  {
+    "sku":"606574",
+    "name":"Raspberry Pi HQ Camera for Raspberry Pi 4 - 12.3 megapixel Sony IMX477 sensor;  7.9mm diagonal image size;  back-illuminated sensor architecture;  adjustable back focus;  support for C- and CS-mount lenses",
+    "url":"https:\/\/www.microcenter.com\/product\/670327\/raspberry-pi-hq-camera-for-raspberry-pi-4-123-megapixel-sony-imx477-sensor",
+    "price":55.99,
+    "stock":"Buy In Store",
+    "availability":"In-Store Pickup",
+    "model":"Pi 4",
+    "memory_gb":null,
     "brand":"Raspberry Pi"
   },
   {
@@ -711,6 +733,17 @@
     "stock":"In Stock",
     "availability":"Usually ships",
     "model":"Pi 5",
+    "memory_gb":null,
+    "brand":"Raspberry Pi"
+  },
+  {
+    "sku":"784058",
+    "name":"Raspberry Pi POE for Pi 3B and 4B",
+    "url":"https:\/\/www.microcenter.com\/product\/688720\/raspberry-pi-poe-for-pi-3b-and-4b",
+    "price":25.99,
+    "stock":"In Stock",
+    "availability":"Usually ships",
+    "model":"Accessory",
     "memory_gb":null,
     "brand":"Raspberry Pi"
   },

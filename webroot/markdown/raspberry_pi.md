@@ -1,6 +1,6 @@
 ## Raspberry Pi Devices
 
-These are the prices at MicroCenter as of Oct 14 2025
+These are the prices at MicroCenter as of Oct 15 2025
 
 ### Raspberry Pi Boards
 
@@ -9,7 +9,7 @@ These are the prices at MicroCenter as of Oct 14 2025
 |512MB|*$7.99*|*$14.99*|*$24.99*|x|x|
 |1GB|x|x|x|*$34.99*|x|
 |2GB|x|x|x|*$44.99*|*$39.99*|
-|4GB|x|x|x|x|*$49.99*|
+|4GB|x|x|x|*$54.99*|*$49.99*|
 |8GB|x|x|x|*$74.99*|*$64.99*|
 |16GB|x|x|x|x|*$99.99*|
 
@@ -27,6 +27,7 @@ Key: *price* = in-store only / pickup.
 |15W||$7.99|[Link](https://www.microcenter.com/product/608170/raspberry-pi-4-official-15w-power-supply-us-black)|Raspberry Pi 4 Official 15W Power Supply US - Black<br>5.1V / 3.0A DC output<br>96-264Vac operating input range<br>…|
 |15W||$7.99|[Link](https://www.microcenter.com/product/608169/raspberry-pi-4-official-15w-power-supply-us-white)|Raspberry Pi 4 Official 15W Power Supply US - White<br>5.1V / 3.0A DC output<br>96-264Vac operating input range<br>…|
 |45W|USB-C|*$14.99*|[Link](https://www.microcenter.com/product/692335/raspberry-pi-45w-usb-c-power-supply)|Raspberry Pi 45W USB-C Power Supply|
+||RJ45 PoE|$25.99|[Link](https://www.microcenter.com/product/688720/raspberry-pi-poe-for-pi-3b-and-4b)|Raspberry Pi POE for Pi 3B and 4B|
 ||RJ45 PoE|$39.99|[Link](https://www.microcenter.com/product/692332/raspberry-pi-poe-injector)|Raspberry Pi PoE Injector|
 
 ### Raspberry Pi Pico
@@ -62,10 +63,11 @@ Key: *price* = in-store only / pickup.
 |$18.99|In Stock|[Link](https://www.microcenter.com/product/662034/raspberry-pi-camera-lens-5mp-25mm)|Raspberry Pi Camera Lens 5MP 25MM|
 |$27.99|In Stock|[Link](https://www.microcenter.com/product/662017/raspberry-pi-camera-3-noir)|Raspberry Pi Camera 3 NoIR|
 |$33.99|In Stock|[Link](https://www.microcenter.com/product/662016/raspberry-pi-camera-3)|Raspberry Pi Camera 3|
-|*$34.99*|Buy In Store|[Link](https://www.microcenter.com/product/662018/raspberry-pi-camera-3-wide)|Raspberry Pi Camera 3 Wide|
+|$34.99|In Stock|[Link](https://www.microcenter.com/product/662018/raspberry-pi-camera-3-wide)|Raspberry Pi Camera 3 Wide|
 |$34.99|In Stock|[Link](https://www.microcenter.com/product/662019/raspberry-pi-camera-3-wide-noir)|Raspberry Pi Camera 3 Wide NoIR|
 |$49.99|In Stock|[Link](https://www.microcenter.com/product/662020/raspberry-pi-hq-camera-m12-mount)|Raspberry Pi HQ Camera - M12 Mount|
 |$55.99|In Stock|[Link](https://www.microcenter.com/product/663805/raspberry-pi-global-shutter-camera)|Raspberry Pi Global Shutter Camera|
+|*$55.99*|Buy In Store|[Link](https://www.microcenter.com/product/670327/raspberry-pi-hq-camera-for-raspberry-pi-4-123-megapixel-sony-imx477-sensor)|Raspberry Pi HQ Camera for Raspberry Pi 4 - 12.3 megapixel Sony IMX477 sensor<br>7.9mm diagonal image size<br>back-illuminated sensor architecture<br>…|
 |$77.99|In Stock|[Link](https://www.microcenter.com/product/683271/raspberry-pi-ai-camera)|Raspberry Pi AI Camera|
 |*$78.99*|Buy In Store|[Link](https://www.microcenter.com/product/621304/raspberry-pi-16mm-telephoto-lens-for-hq-camera)|Raspberry Pi 16mm Telephoto Lens for HQ Camera<br>16mm Focal length<br>F1.4 - 16 Aperture|
 

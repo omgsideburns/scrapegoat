@@ -60,6 +60,10 @@
     "name":"Raspberry Pi 4 Model B;  Broadcom BCM2711 Quad core Cortex-A72 (ARM v8) 64-bit SoC;  2GB DDR4 RAM"
   },
   {
+    "sku":"278523",
+    "name":"Raspberry Pi 4 Model B;  Broadcom BCM2711 Quad core Cortex-A72 (ARM v8) 64-bit SoC;  4GB DDR4 RAM"
+  },
+  {
     "sku":"99788",
     "name":"Raspberry Pi 4 Model B;  Broadcom BCM2711 Quad core Cortex-A72 (ARM v8) 64-bit SoC;  8GB DDR4 RAM"
   },
@@ -248,6 +252,10 @@
     "name":"Raspberry Pi HQ Camera - M12 Mount"
   },
   {
+    "sku":"606574",
+    "name":"Raspberry Pi HQ Camera for Raspberry Pi 4 - 12.3 megapixel Sony IMX477 sensor;  7.9mm diagonal image size;  back-illuminated sensor architecture;  adjustable back focus;  support for C- and CS-mount lenses"
+  },
+  {
     "sku":"531947",
     "name":"Raspberry Pi HQ Lens M12;  12 Megapixel;  Wide Angle Lens"
   },
@@ -298,6 +306,10 @@
   {
     "sku":"6783",
     "name":"Raspberry Pi Official USB Keyboard with USB Hub - Red\/White"
+  },
+  {
+    "sku":"784058",
+    "name":"Raspberry Pi POE for Pi 3B and 4B"
   },
   {
     "sku":"774067",
