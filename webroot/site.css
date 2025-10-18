@@ -8,15 +8,11 @@ body.scrapegoat-body {
 }
 
 .scrapegoat-fallback-main {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  line-height: 1.5;
   min-height: 100vh;
   padding: 2rem 1.5rem;
 }
 
 .scrapegoat-wrapper {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  line-height: 1.5;
   max-width: 1080px;
   margin: 0 auto;
   padding: 1.5rem;
@@ -30,6 +26,8 @@ body.scrapegoat-body {
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.5;
 }
 
 .container {
@@ -76,14 +74,14 @@ body.scrapegoat-body {
   border-collapse: collapse;
 }
 
-.scrapegoat-wrapper table.grid th,
-.scrapegoat-wrapper table.grid td {
+.scrapegoat-wrapper .scrapegoat-table th,
+.scrapegoat-wrapper .scrapegoat-table td {
   border: 1px solid #dcdcdc;
   padding: 0.4rem 0.6rem;
   text-align: center;
 }
 
-.scrapegoat-wrapper table.grid th {
+.scrapegoat-wrapper .scrapegoat-table th {
   background: #f0f0f0;
   font-weight: 600;
 }
@@ -183,11 +181,11 @@ a {
     background: #1f2123;
     box-shadow: none;
   }
-  table.grid th,
-  table.grid td {
+  .scrapegoat-table th,
+  .scrapegoat-table td {
     border-color: #333;
   }
-  table.grid th {
+  .scrapegoat-table th {
     background: #2a2d30;
   }
   .table-card {

@@ -1,0 +1,38 @@
+/* Scrapegoat tables + item view styles migrated from webroot/site.css */
+
+@layer components {
+  body.scrapegoat-body,
+  .scrapegoat-wrapper,
+  .scrapegoat-wrapper--fallback,
+  .scrapegoat-fallback-main,
+  .scrapegoat-wrapper .page-header,
+  .scrapegoat-wrapper .page-header h1,
+  .scrapegoat-wrapper .page-header h2,
+  .scrapegoat-wrapper .lede,
+  .scrapegoat-wrapper .nav-links,
+  .scrapegoat-wrapper .nav-links a,
+  .scrapegoat-wrapper .table-wrapper,
+  .scrapegoat-wrapper table,
+  .scrapegoat-wrapper .scrapegoat-table th,
+  .scrapegoat-wrapper .scrapegoat-table td,
+  .scrapegoat-wrapper .scrapegoat-table th,
+  .scrapegoat-wrapper .markdown-table th,
+  .scrapegoat-wrapper .markdown-table td,
+  .scrapegoat-wrapper .table-card,
+  .scrapegoat-wrapper .table-card__header,
+  .scrapegoat-wrapper .table-card__header h2,
+  .scrapegoat-wrapper .copy-btn,
+  .scrapegoat-wrapper .copy-btn:hover,
+  .scrapegoat-wrapper .copy-btn:focus,
+  .scrapegoat-wrapper .table-notes,
+  .scrapegoat-wrapper .note-text,
+  .scrapegoat-wrapper .page-footer,
+  .scrapegoat-wrapper .page-footer a,
+  .scrapegoat-wrapper table.display td,
+  .scrapegoat-wrapper .chart-section,
+  .scrapegoat-wrapper a,
+  .sr-only,
+  @media (prefers-color-scheme: dark) { body.scrapegoat-body; }
+}
+
+/* See .tailwind.css for actual definitions; this file documents what moved. */

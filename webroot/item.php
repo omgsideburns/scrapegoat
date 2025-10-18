@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+require_once __DIR__ . '/bootstrap.php';
+
 $sku = preg_replace('/[^0-9A-Za-z\-]/', '', $_GET['sku'] ?? '');
 if ($sku === '') {
     http_response_code(400);
@@ -8,8 +10,8 @@ if ($sku === '') {
     exit;
 }
 
-$path = __DIR__ . "/data/history/{$sku}.json";
-if (!file_exists($path)) {
+$historyJson = scrapegoat_load_asset("data/history/{$sku}.json", required: false);
+if ($historyJson === null) {
     http_response_code(404);
     echo "Unknown SKU.";
     exit;
@@ -34,7 +36,19 @@ if (!function_exists('render_fragment')) {
 }
 
 
-$item = json_decode(file_get_contents($path), true, flags: JSON_THROW_ON_ERROR);
+try {
+    $item = json_decode($historyJson, true, flags: JSON_THROW_ON_ERROR);
+} catch (Throwable) {
+    http_response_code(500);
+    echo "Item data is unavailable.";
+    exit;
+}
+
+if (!is_array($item)) {
+    http_response_code(500);
+    echo "Item data is unavailable.";
+    exit;
+}
 $series = $item['series'] ?? [];
 function layout_start(string $pageTitle): bool
 {
@@ -49,7 +63,6 @@ function layout_start(string $pageTitle): bool
     echo "  <meta charset=\"utf-8\">\n";
     echo "  <title>" . htmlspecialchars($pageTitle, ENT_QUOTES, 'UTF-8') . "</title>\n";
     echo "  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n";
-    echo "  <link rel=\"stylesheet\" href=\"site.css\">\n";
     echo "  <script src=\"https://cdn.jsdelivr.net/npm/chart.js@4\"></script>\n";
     echo "</head>\n<body class=\"scrapegoat-body\">\n";
     echo "<main class=\"scrapegoat-fallback-main\">\n";
@@ -73,7 +86,6 @@ function layout_end(bool $customHeaderUsed): void
 $pageTitle = ($item['name'] ?? $sku) . ' price history';
 $customHeaderUsed = layout_start($pageTitle);
 if ($customHeaderUsed) {
-    echo '<link rel="stylesheet" href="site.css" data-scrapegoat-css>';
     echo '<script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>';
 }
 $wrapperClasses = 'scrapegoat-wrapper' . ($customHeaderUsed ? ' scrapegoat-wrapper--embedded' : ' scrapegoat-wrapper--fallback');
@@ -91,7 +103,7 @@ $wrapperClasses = 'scrapegoat-wrapper' . ($customHeaderUsed ? ' scrapegoat-wrapp
 
   <section>
     <h2>Recent prices</h2>
-    <table class="grid">
+    <table class="scrapegoat-table">
       <thead>
         <tr>
           <th>Date</th>

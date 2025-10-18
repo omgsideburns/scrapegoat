@@ -1,11 +1,12 @@
 <?php
 declare(strict_types=1);
 
-$dataDir = __DIR__ . '/data';
-$matrixPath = $dataDir . '/sbc_matrix.json';
-$latestPath = $dataDir . '/latest.json';
+require_once __DIR__ . '/bootstrap.php';
 
-if (!file_exists($matrixPath) || !file_exists($latestPath)) {
+$matrixJson = scrapegoat_load_asset('data/sbc_matrix.json');
+$latestJson = scrapegoat_load_asset('data/latest.json');
+
+if ($matrixJson === null || $latestJson === null) {
     http_response_code(503);
     echo "Data exports not found. Run the scraper pipeline.";
     exit;
@@ -30,8 +31,20 @@ if (!function_exists('render_fragment')) {
 }
 
 
-$matrix = json_decode(file_get_contents($matrixPath), true, flags: JSON_THROW_ON_ERROR);
-$latest = json_decode(file_get_contents($latestPath), true, flags: JSON_THROW_ON_ERROR);
+try {
+    $matrix = json_decode($matrixJson, true, flags: JSON_THROW_ON_ERROR);
+    $latest = json_decode($latestJson, true, flags: JSON_THROW_ON_ERROR);
+} catch (Throwable) {
+    http_response_code(503);
+    echo "Data exports are unreadable. Run the scraper pipeline.";
+    exit;
+}
+
+if (!is_array($matrix) || !is_array($latest)) {
+    http_response_code(503);
+    echo "Data exports are unreadable. Run the scraper pipeline.";
+    exit;
+}
 function layout_start(): bool
 {
     $header = render_fragment('header.html');
@@ -46,7 +59,6 @@ function layout_start(): bool
     echo "  <title>Raspberry Pi Prices</title>\n";
     echo "  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n";
     echo "  <link rel=\"stylesheet\" href=\"https://cdn.datatables.net/1.13.8/css/jquery.dataTables.min.css\">\n";
-    echo "  <link rel=\"stylesheet\" href=\"site.css\">\n";
     echo "</head>\n<body class=\"scrapegoat-body\">\n";
     echo "<main class=\"scrapegoat-fallback-main\">\n";
     return false;
@@ -67,7 +79,6 @@ function layout_end(bool $customHeaderUsed): void
 
 $customHeaderUsed = layout_start();
 if ($customHeaderUsed) {
-    echo '<link rel="stylesheet" href="site.css" data-scrapegoat-css>';
     echo '<link rel="stylesheet" href="https://cdn.datatables.net/1.13.8/css/jquery.dataTables.min.css" data-scrapegoat-css>';
 }
 $wrapperClasses = 'scrapegoat-wrapper' . ($customHeaderUsed ? ' scrapegoat-wrapper--embedded' : ' scrapegoat-wrapper--fallback');
@@ -84,7 +95,7 @@ $wrapperClasses = 'scrapegoat-wrapper' . ($customHeaderUsed ? ' scrapegoat-wrapp
   <section>
     <h2>Board price grid</h2>
     <div class="table-wrapper">
-      <table class="grid">
+      <table class="scrapegoat-table">
         <thead>
           <tr>
             <th>Model</th>
