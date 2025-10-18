@@ -1,0 +1,18 @@
+{
+  "sku": "872945",
+  "name": "Raspberry Pi 3 Model B+",
+  "series": [
+    {
+      "date": "2025-10-13",
+      "price": 34.99,
+      "is_sale": false,
+      "is_low": true
+    },
+    {
+      "date": "2025-10-15",
+      "price": 34.99,
+      "is_sale": false,
+      "is_low": true
+    }
+  ]
+}

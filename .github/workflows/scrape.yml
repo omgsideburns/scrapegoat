@@ -27,20 +27,20 @@ jobs:
         run: |
           DATE=$(date -u +%F)
           mkdir -p data/snapshots
-          SCRAPER_THROTTLE=1.5 python scripts/search.py "https://www.microcenter.com/search/search_results.aspx?fq=brand:Raspberry+Pi&sortby=match&rpp=96&myStore=false" \
+          SCRAPER_THROTTLE=1.5 python pipeline/search.py "https://www.microcenter.com/search/search_results.aspx?fq=brand:Raspberry+Pi&sortby=match&rpp=96&myStore=false" \
             --out "data/snapshots/${DATE}_pi_brand.csv" --pages 1
 
       - name: Merge, flag, export
         run: |
-          python scripts/10_merge_history.py
-          python scripts/20_flags.py
-          python scripts/25_export_json.py
-          python scripts/26_build_markdown.py
+          python pipeline/10_merge_history.py
+          python pipeline/20_flags.py
+          python pipeline/25_export_json.py
+          python pipeline/26_build_markdown.py
 
       - name: Commit artifacts
         run: |
           git config user.name "omgsideburns"
           git config user.email "tony@xtonyx.org"
-          git add data/snapshots/*.csv data/history/price_history.csv data/history/price_flags.csv webroot/data/*.json webroot/data/history/*.json webroot/markdown/*.md
+          git add data/snapshots/*.csv data/history/price_history.csv data/history/price_flags.csv site/data/*.json site/data/history/*.json site/markdown/*.md
           git commit -m "Automated price update $(date -u +%F)" || echo "No changes"
           git push

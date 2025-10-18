@@ -1,0 +1,18 @@
+{
+  "sku": "531517",
+  "name": "Raspberry Pi HQ Camera - M12 Mount",
+  "series": [
+    {
+      "date": "2025-10-13",
+      "price": 49.99,
+      "is_sale": false,
+      "is_low": true
+    },
+    {
+      "date": "2025-10-15",
+      "price": 49.99,
+      "is_sale": false,
+      "is_low": true
+    }
+  ]
+}

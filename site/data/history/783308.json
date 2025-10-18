@@ -1,0 +1,18 @@
+{
+  "sku": "783308",
+  "name": "Raspberry Pi 32GB A2 SD Card and Card Reader",
+  "series": [
+    {
+      "date": "2025-10-13",
+      "price": 14.99,
+      "is_sale": false,
+      "is_low": true
+    },
+    {
+      "date": "2025-10-15",
+      "price": 14.99,
+      "is_sale": false,
+      "is_low": true
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "sku": "740639",
+  "name": "Raspberry Pi 4 Accessories Kit",
+  "series": [
+    {
+      "date": "2025-10-13",
+      "price": 34.99,
+      "is_sale": false,
+      "is_low": true
+    },
+    {
+      "date": "2025-10-15",
+      "price": 34.99,
+      "is_sale": false,
+      "is_low": true
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "sku": "950402",
+  "name": "Raspberry Pi Micro-HDMI to Standard HDMI (A/M), 1m cable",
+  "series": [
+    {
+      "date": "2025-10-13",
+      "price": 7.99,
+      "is_sale": false,
+      "is_low": true
+    },
+    {
+      "date": "2025-10-15",
+      "price": 7.99,
+      "is_sale": false,
+      "is_low": true
+    }
+  ]
+}

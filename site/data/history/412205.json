@@ -1,0 +1,18 @@
+{
+  "sku": "412205",
+  "name": "Raspberry Pi Pico W;  RP2040 32-bit Cortex M0+ Dual Core Processor;  264KB RAM",
+  "series": [
+    {
+      "date": "2025-10-13",
+      "price": 4.99,
+      "is_sale": false,
+      "is_low": true
+    },
+    {
+      "date": "2025-10-15",
+      "price": 4.99,
+      "is_sale": false,
+      "is_low": true
+    }
+  ]
+}

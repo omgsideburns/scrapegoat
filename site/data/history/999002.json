@@ -1,0 +1,42 @@
+{
+  "sku": "999002",
+  "name": "Raspberry Pi 5 8GB Board",
+  "series": [
+    {
+      "date": "2025-10-12",
+      "price": 79.99,
+      "is_sale": false,
+      "is_low": true
+    },
+    {
+      "date": "2025-10-13",
+      "price": 79.99,
+      "is_sale": false,
+      "is_low": true
+    },
+    {
+      "date": "2025-10-14",
+      "price": 79.99,
+      "is_sale": false,
+      "is_low": true
+    },
+    {
+      "date": "2025-10-16",
+      "price": 79.99,
+      "is_sale": false,
+      "is_low": true
+    },
+    {
+      "date": "2025-10-17",
+      "price": 79.99,
+      "is_sale": false,
+      "is_low": true
+    },
+    {
+      "date": "2025-10-18",
+      "price": 79.99,
+      "is_sale": false,
+      "is_low": true
+    }
+  ]
+}

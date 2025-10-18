@@ -1,0 +1,18 @@
+{
+  "sku": "783902",
+  "name": "Raspberry Pi 500 - Unit Only",
+  "series": [
+    {
+      "date": "2025-10-13",
+      "price": 89.99,
+      "is_sale": false,
+      "is_low": true
+    },
+    {
+      "date": "2025-10-15",
+      "price": 89.99,
+      "is_sale": false,
+      "is_low": true
+    }
+  ]
+}

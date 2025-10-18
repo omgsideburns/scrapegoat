@@ -1,0 +1,18 @@
+{
+  "sku": "772590",
+  "name": "Raspberry Pi 15.6 in Full HD IPS Monitor",
+  "series": [
+    {
+      "date": "2025-10-13",
+      "price": 99.99,
+      "is_sale": false,
+      "is_low": true
+    },
+    {
+      "date": "2025-10-15",
+      "price": 99.99,
+      "is_sale": false,
+      "is_low": true
+    }
+  ]
+}

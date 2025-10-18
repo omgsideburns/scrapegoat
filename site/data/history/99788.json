@@ -1,0 +1,18 @@
+{
+  "sku": "99788",
+  "name": "Raspberry Pi 4 Model B;  Broadcom BCM2711 Quad core Cortex-A72 (ARM v8) 64-bit SoC;  8GB DDR4 RAM",
+  "series": [
+    {
+      "date": "2025-10-13",
+      "price": 74.99,
+      "is_sale": false,
+      "is_low": true
+    },
+    {
+      "date": "2025-10-15",
+      "price": 74.99,
+      "is_sale": false,
+      "is_low": true
+    }
+  ]
+}

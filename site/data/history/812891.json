@@ -1,0 +1,18 @@
+{
+  "sku": "812891",
+  "name": "Raspberry Pi Carbon Removal Credits",
+  "series": [
+    {
+      "date": "2025-10-13",
+      "price": 3.99,
+      "is_sale": false,
+      "is_low": true
+    },
+    {
+      "date": "2025-10-15",
+      "price": 3.99,
+      "is_sale": false,
+      "is_low": true
+    }
+  ]
+}

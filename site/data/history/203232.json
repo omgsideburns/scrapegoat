@@ -1,0 +1,18 @@
+{
+  "sku": "203232",
+  "name": "Raspberry Pi 400 Personal Computer Kit;  Broadcom BCM2711 Quad core Cortex-A72 (ARM v8) 64-bit SoC;  4GB RAM;  Built-in Keyboard",
+  "series": [
+    {
+      "date": "2025-10-13",
+      "price": 89.99,
+      "is_sale": false,
+      "is_low": true
+    },
+    {
+      "date": "2025-10-15",
+      "price": 89.99,
+      "is_sale": false,
+      "is_low": true
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "sku": "892919",
+  "name": "Raspberry Pi Mouse 2 - (White)",
+  "series": [
+    {
+      "date": "2025-10-13",
+      "price": 7.99,
+      "is_sale": false,
+      "is_low": true
+    },
+    {
+      "date": "2025-10-15",
+      "price": 7.99,
+      "is_sale": false,
+      "is_low": true
+    }
+  ]
+}

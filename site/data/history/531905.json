@@ -1,0 +1,18 @@
+{
+  "sku": "531905",
+  "name": "Raspberry Pi Camera 3 NoIR",
+  "series": [
+    {
+      "date": "2025-10-13",
+      "price": 27.99,
+      "is_sale": false,
+      "is_low": true
+    },
+    {
+      "date": "2025-10-15",
+      "price": 27.99,
+      "is_sale": false,
+      "is_low": true
+    }
+  ]
+}

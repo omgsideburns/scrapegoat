@@ -1,0 +1,18 @@
+{
+  "sku": "720128",
+  "name": "Raspberry Pi 5 Desktop Kit - 8GB",
+  "series": [
+    {
+      "date": "2025-10-13",
+      "price": 139.99,
+      "is_sale": false,
+      "is_low": true
+    },
+    {
+      "date": "2025-10-15",
+      "price": 139.99,
+      "is_sale": false,
+      "is_low": true
+    }
+  ]
+}

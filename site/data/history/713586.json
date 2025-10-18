@@ -1,0 +1,18 @@
+{
+  "sku": "713586",
+  "name": "Raspberry Pi Sense HAT",
+  "series": [
+    {
+      "date": "2025-10-13",
+      "price": 29.99,
+      "is_sale": false,
+      "is_low": true
+    },
+    {
+      "date": "2025-10-15",
+      "price": 29.99,
+      "is_sale": false,
+      "is_low": true
+    }
+  ]
+}
