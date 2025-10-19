@@ -1,8 +1,33 @@
 # Scrapegoat – Raspberry Pi price data & tooling
 
-Scrapegoat continuously collects Raspberry Pi pricing from public Micro Center listings. Every run generates CSV history, Markdown summaries, and JSON feeds that are committed to this repository so anyone can pull the data straight from GitHub — no scraper required.
+Scrapegoat runs daily to collect Raspberry Pi pricing from public Micro Center listings. Every run generates CSV history, Markdown summaries, and JSON feeds that are committed to this repository so anyone can pull the data straight from GitHub — no scraper required.
 
 The project also ships a lightweight PHP bundle so you can drop the live tables into your own site, plus the full collection pipeline if you want to regenerate everything yourself.
+
+The current price table is displayed below.
+
+<!-- pi-table:start -->
+
+## Raspberry Pi Devices
+
+These are the prices at MicroCenter as of Oct 18 2025
+
+### Raspberry Pi Boards
+
+| Memory | Zero W <sup>1.</sup> | Zero 2 W <sup>1.</sup> |   Pi 3A+ |    Pi 4B |     Pi 5 |
+| :----- | -------------------: | ---------------------: | -------: | -------: | -------: |
+| 512MB  |              _$7.99_ |               _$14.99_ | _$24.99_ |        x |        x |
+| 1GB    |                    x |                      x |        x | _$34.99_ |        x |
+| 2GB    |                    x |                      x |        x | _$44.99_ | _$39.99_ |
+| 4GB    |                    x |                      x |        x | _$54.99_ | _$49.99_ |
+| 8GB    |                    x |                      x |        x | _$74.99_ | _$64.99_ |
+| 16GB   |                    x |                      x |        x |        x | _$99.99_ |
+
+Key: _price_ = in-store only / pickup.
+
+<sup>1.</sup> Add $1.00 for a Zero with pre-soldered headers.
+
+<!-- pi-table:end -->
 
 ## What lives where
 
@@ -15,44 +40,21 @@ The project also ships a lightweight PHP bundle so you can drop the live tables 
 
 The easiest entry point is the published JSON and Markdown under `site/`:
 
-| Artifact | Description | Raw URL |
-| --- | --- | --- |
-| `site/data/latest.json` | Most recent listing per SKU with price, availability, and metadata. | <https://raw.githubusercontent.com/omgsideburns/scrapegoat/main/site/data/latest.json> |
-| `site/data/sbc_matrix.json` | Memory × model pricing grid for the main Raspberry Pi boards. | <https://raw.githubusercontent.com/omgsideburns/scrapegoat/main/site/data/sbc_matrix.json> |
-| `site/data/history/<SKU>.json` | Per-SKU time series used for charts. | replace `<SKU>` as needed |
-| `site/markdown/raspberry_pi.md` | Markdown tables used on the site/blog. | <https://raw.githubusercontent.com/omgsideburns/scrapegoat/main/site/markdown/raspberry_pi.md> |
+| Artifact                        | Description                                                         | Raw URL                                                                                        |
+| ------------------------------- | ------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `site/data/latest.json`         | Most recent listing per SKU with price, availability, and metadata. | <https://raw.githubusercontent.com/omgsideburns/scrapegoat/main/site/data/latest.json>         |
+| `site/data/sbc_matrix.json`     | Memory × model pricing grid for the main Raspberry Pi boards.       | <https://raw.githubusercontent.com/omgsideburns/scrapegoat/main/site/data/sbc_matrix.json>     |
+| `site/data/history/<SKU>.json`  | Per-SKU time series used for charts.                                | replace `<SKU>` as needed                                                                      |
+| `site/markdown/raspberry_pi.md` | Markdown tables used on the site/blog.                              | <https://raw.githubusercontent.com/omgsideburns/scrapegoat/main/site/markdown/raspberry_pi.md> |
 
 If you need the raw inputs, `data/snapshots/` stores immutable CSV grabs of the Micro Center brand feed and `data/history/` holds the normalized, annotated history (`price_history.csv`, `price_flags.csv`).
-
-## Current Micro Center snapshot
-
-<!-- pi-table:start -->
-## Raspberry Pi Devices
-
-These are the prices at MicroCenter as of Oct 18 2025
-
-### Raspberry Pi Boards
-
-|Memory|Zero W <sup>1.</sup>|Zero 2 W <sup>1.</sup>|Pi 3A+|Pi 4B|Pi 5|
-|:-|-:|-:|-:|-:|-:|
-|512MB|*$7.99*|*$14.99*|*$24.99*|x|x|
-|1GB|x|x|x|*$34.99*|x|
-|2GB|x|x|x|*$44.99*|*$39.99*|
-|4GB|x|x|x|*$54.99*|*$49.99*|
-|8GB|x|x|x|*$74.99*|*$64.99*|
-|16GB|x|x|x|x|*$99.99*|
-
-Key: *price* = in-store only / pickup.
-
-<sup>1.</sup> Add $1.00 for a Zero with pre-soldered headers.
-<!-- pi-table:end -->
 
 ## Drop the tables into your own site
 
 1. Copy the `embed/` directory (and optionally `site/site.css`) into your project.
 2. Add the stylesheet or link to the hosted version:
    ```html
-   <link rel="stylesheet" href="https://xtonyx.org/scrapegoat/site.css">
+   <link rel="stylesheet" href="https://xtonyx.org/scrapegoat/site.css" />
    ```
 3. Include the tables:
    ```php
