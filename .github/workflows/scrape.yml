@@ -36,11 +36,12 @@ jobs:
           python pipeline/20_flags.py
           python pipeline/25_export_json.py
           python pipeline/26_build_markdown.py
+          python pipeline/27_update_readme.py
 
       - name: Commit artifacts
         run: |
           git config user.name "omgsideburns"
           git config user.email "tony@xtonyx.org"
-          git add data/snapshots/*.csv data/history/price_history.csv data/history/price_flags.csv site/data/*.json site/data/history/*.json site/markdown/*.md
+          git add data/snapshots/*.csv data/history/price_history.csv data/history/price_flags.csv site/data/*.json site/data/history/*.json site/markdown/*.md site/snippets/*.md README.md
           git commit -m "Automated price update $(date -u +%F)" || echo "No changes"
           git push

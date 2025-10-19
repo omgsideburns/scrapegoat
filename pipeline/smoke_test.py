@@ -46,6 +46,7 @@ def main() -> None:
         [sys.executable, "pipeline/20_flags.py"],
         [sys.executable, "pipeline/25_export_json.py"],
         [sys.executable, "pipeline/26_build_markdown.py"],
+        [sys.executable, "pipeline/27_update_readme.py"],
     ]
     for cmd in cmds:
         subprocess.check_call(cmd, cwd=ROOT)
@@ -57,6 +58,12 @@ def main() -> None:
     assert sample_history.exists(), "per-SKU history missing"
     markdown_report = ROOT / "site/markdown/raspberry_pi.md"
     assert markdown_report.exists(), "markdown report missing"
+    snippet_file = ROOT / "site/snippets/pi_boards.md"
+    assert snippet_file.exists(), "README snippet missing"
+    readme_text = (ROOT / "README.md").read_text(encoding="utf-8")
+    assert "<!-- pi-table:start -->" in readme_text, "README start marker missing"
+    assert "<!-- pi-table:end -->" in readme_text, "README end marker missing"
+    assert "Raspberry Pi Boards" in readme_text.split("<!-- pi-table:start -->", 1)[1], "README snippet not injected"
     print("Smoke test passed.")
 
 
