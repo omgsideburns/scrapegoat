@@ -101,7 +101,7 @@ def _availability_status(stock: str, availability: str) -> str:
     return "available"
 
 
-def _format_price_markdown(record: Optional[dict[str, object]]) -> str:
+def _format_price_markdown(record: Optional[dict[str, object]], link_url: bool = False) -> str:
     if not record:
         return "x"
     price = record.get("price")
@@ -110,10 +110,17 @@ def _format_price_markdown(record: Optional[dict[str, object]]) -> str:
     price_str = f"${float(price):.2f}"
     status = record.get("status", "available")
     if status == "sold_out":
-        return f"~~{price_str}~~"
-    if status == "store_only":
-        return f"*{price_str}*"
-    return price_str
+        decorated = f"~~{price_str}~~"
+    elif status == "store_only":
+        decorated = f"*{price_str}*"
+    else:
+        decorated = price_str
+
+    if link_url:
+        url = record.get("url")
+        if isinstance(url, str) and url.strip():
+            return f"[{decorated}]({url.strip()})"
+    return decorated
 
 
 def _price_record_from_row(row: pd.Series) -> Optional[dict[str, object]]:
@@ -123,6 +130,7 @@ def _price_record_from_row(row: pd.Series) -> Optional[dict[str, object]]:
     return {
         "price": float(price),
         "status": _availability_status(row.get("stock", ""), row.get("availability", "")),
+        "url": row.get("url"),
     }
 
 
@@ -189,6 +197,7 @@ def _build_board_tables(latest: pd.DataFrame) -> tuple[list[str], bool]:
                 data[key] = {
                     "price": float(price),
                     "status": status,
+                    "url": row.get("url"),
                 }
                 if status != "available":
                     status_seen.add(status)
@@ -213,7 +222,7 @@ def _build_board_tables(latest: pd.DataFrame) -> tuple[list[str], bool]:
             cells = [label]
             for board in used_columns:
                 record = data.get((label, board))
-                cells.append(_format_price_markdown(record))
+                cells.append(_format_price_markdown(record, link_url=True))
             rows.append("|" + "|".join(cells) + "|")
 
         include_zero_note = include_zero_note or any(
