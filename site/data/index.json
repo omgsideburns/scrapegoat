@@ -12,6 +12,10 @@
     "name":"Raspberry Pi 16mm Telephoto Lens for HQ Camera;  16mm Focal length;  F1.4 - 16 Aperture"
   },
   {
+    "sku":"087288",
+    "name":"Raspberry Pi 16mm Telephoto Lens for HQ Camera;  16mm Focal length;  F1.4 - 16 Aperture"
+  },
+  {
     "sku":"773648",
     "name":"Raspberry Pi 256GB SSD Kit"
   },
@@ -60,8 +64,16 @@
     "name":"Raspberry Pi 4 Model B;  Broadcom BCM2711 Quad core Cortex-A72 (ARM v8) 64-bit SoC;  2GB DDR4 RAM"
   },
   {
+    "sku":"087320",
+    "name":"Raspberry Pi 4 Model B;  Broadcom BCM2711 Quad core Cortex-A72 (ARM v8) 64-bit SoC;  2GB DDR4 RAM"
+  },
+  {
     "sku":"278523",
     "name":"Raspberry Pi 4 Model B;  Broadcom BCM2711 Quad core Cortex-A72 (ARM v8) 64-bit SoC;  4GB DDR4 RAM"
+  },
+  {
+    "sku":"099788",
+    "name":"Raspberry Pi 4 Model B;  Broadcom BCM2711 Quad core Cortex-A72 (ARM v8) 64-bit SoC;  8GB DDR4 RAM"
   },
   {
     "sku":"99788",
@@ -292,7 +304,15 @@
     "name":"Raspberry Pi Official Raspberry Pi Optical USB Mouse - Black\/Grey"
   },
   {
+    "sku":"006825",
+    "name":"Raspberry Pi Official Raspberry Pi Optical USB Mouse - Black\/Grey"
+  },
+  {
     "sku":"6817",
+    "name":"Raspberry Pi Official Raspberry Pi Optical USB Mouse - Red\/White"
+  },
+  {
+    "sku":"006817",
     "name":"Raspberry Pi Official Raspberry Pi Optical USB Mouse - Red\/White"
   },
   {
@@ -302,6 +322,14 @@
   {
     "sku":"6791",
     "name":"Raspberry Pi Official USB Keyboard with USB Hub - Black\/Gray"
+  },
+  {
+    "sku":"006791",
+    "name":"Raspberry Pi Official USB Keyboard with USB Hub - Black\/Gray"
+  },
+  {
+    "sku":"006783",
+    "name":"Raspberry Pi Official USB Keyboard with USB Hub - Red\/White"
   },
   {
     "sku":"6783",
@@ -370,6 +398,10 @@
   {
     "sku":"772582",
     "name":"Raspberry Pi Touch Display 2"
+  },
+  {
+    "sku":"893008",
+    "name":"Raspberry Pi Touch Display 2 (5\" Portrait)"
   },
   {
     "sku":"734046",

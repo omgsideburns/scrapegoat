@@ -1,0 +1,12 @@
+{
+  "sku": "893008",
+  "name": "Raspberry Pi Touch Display 2 (5\" Portrait)",
+  "series": [
+    {
+      "date": "2025-11-06",
+      "price": 54.99,
+      "is_sale": false,
+      "is_low": true
+    }
+  ]
+}
