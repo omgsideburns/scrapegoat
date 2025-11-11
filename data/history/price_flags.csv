@@ -306,6 +306,7 @@ date,sku,name,url,price,stock,availability,model,memory_gb,brand,rolling_median,
 2025-11-08,999001,Raspberry Pi 4 4GB Board,https://www.microcenter.com/product/622539/raspberry-pi-4-model-b-4gb-single-board-computer,54.99,In Stock,In stock,Pi 4,4.0,Raspberry Pi,54.99,54.99,False,True,0.0
 2025-11-09,999001,Raspberry Pi 4 4GB Board,https://www.microcenter.com/product/622539/raspberry-pi-4-model-b-4gb-single-board-computer,54.99,In Stock,In stock,Pi 4,4.0,Raspberry Pi,54.99,54.99,False,True,0.0
 2025-11-10,999001,Raspberry Pi 4 4GB Board,https://www.microcenter.com/product/622539/raspberry-pi-4-model-b-4gb-single-board-computer,54.99,In Stock,In stock,Pi 4,4.0,Raspberry Pi,54.99,54.99,False,True,0.0
+2025-11-11,999001,Raspberry Pi 4 4GB Board,https://www.microcenter.com/product/622539/raspberry-pi-4-model-b-4gb-single-board-computer,54.99,In Stock,In stock,Pi 4,4.0,Raspberry Pi,54.99,54.99,False,True,0.0
 2025-10-12,999002,Raspberry Pi 5 8GB Board,https://example.com/p2,79.99,Buy In Store,In-Store Only,Pi 5,8.0,Raspberry Pi,,79.99,False,True,
 2025-10-13,999002,Raspberry Pi 5 8GB Board,https://www.microcenter.com/product/700975/raspberry-pi-5-8gb-single-board-computer,79.99,Buy In Store,In-Store Only,Pi 5,8.0,Raspberry Pi,,79.99,False,True,
 2025-10-14,999002,Raspberry Pi 5 8GB Board,https://www.microcenter.com/product/700975/raspberry-pi-5-8gb-single-board-computer,79.99,Buy In Store,In-Store Only,Pi 5,8.0,Raspberry Pi,79.99,79.99,False,True,0.0
@@ -334,6 +335,7 @@ date,sku,name,url,price,stock,availability,model,memory_gb,brand,rolling_median,
 2025-11-08,999002,Raspberry Pi 5 8GB Board,https://www.microcenter.com/product/700975/raspberry-pi-5-8gb-single-board-computer,79.99,Buy In Store,In-Store Only,Pi 5,8.0,Raspberry Pi,79.99,79.99,False,True,0.0
 2025-11-09,999002,Raspberry Pi 5 8GB Board,https://www.microcenter.com/product/700975/raspberry-pi-5-8gb-single-board-computer,79.99,Buy In Store,In-Store Only,Pi 5,8.0,Raspberry Pi,79.99,79.99,False,True,0.0
 2025-11-10,999002,Raspberry Pi 5 8GB Board,https://www.microcenter.com/product/700975/raspberry-pi-5-8gb-single-board-computer,79.99,Buy In Store,In-Store Only,Pi 5,8.0,Raspberry Pi,79.99,79.99,False,True,0.0
+2025-11-11,999002,Raspberry Pi 5 8GB Board,https://www.microcenter.com/product/700975/raspberry-pi-5-8gb-single-board-computer,79.99,Buy In Store,In-Store Only,Pi 5,8.0,Raspberry Pi,79.99,79.99,False,True,0.0
 2025-10-13,999003,Raspberry Pi 400 Personal Computer Kit,https://www.microcenter.com/product/630737/raspberry-pi-400-personal-computer-kit--us-keyboard-layout,99.99,In Stock,In stock,Pi 4,,Raspberry Pi,,99.99,False,True,
 2025-10-14,999003,Raspberry Pi 400 Personal Computer Kit,https://www.microcenter.com/product/630737/raspberry-pi-400-personal-computer-kit--us-keyboard-layout,99.99,In Stock,In stock,Pi 4,,Raspberry Pi,,99.99,False,True,
 2025-10-16,999003,Raspberry Pi 400 Personal Computer Kit,https://www.microcenter.com/product/630737/raspberry-pi-400-personal-computer-kit--us-keyboard-layout,99.99,In Stock,In stock,Pi 4,,Raspberry Pi,99.99,99.99,False,True,0.0
@@ -361,6 +363,7 @@ date,sku,name,url,price,stock,availability,model,memory_gb,brand,rolling_median,
 2025-11-08,999003,Raspberry Pi 400 Personal Computer Kit,https://www.microcenter.com/product/630737/raspberry-pi-400-personal-computer-kit--us-keyboard-layout,99.99,In Stock,In stock,Pi 4,,Raspberry Pi,99.99,99.99,False,True,0.0
 2025-11-09,999003,Raspberry Pi 400 Personal Computer Kit,https://www.microcenter.com/product/630737/raspberry-pi-400-personal-computer-kit--us-keyboard-layout,99.99,In Stock,In stock,Pi 4,,Raspberry Pi,99.99,99.99,False,True,0.0
 2025-11-10,999003,Raspberry Pi 400 Personal Computer Kit,https://www.microcenter.com/product/630737/raspberry-pi-400-personal-computer-kit--us-keyboard-layout,99.99,In Stock,In stock,Pi 4,,Raspberry Pi,99.99,99.99,False,True,0.0
+2025-11-11,999003,Raspberry Pi 400 Personal Computer Kit,https://www.microcenter.com/product/630737/raspberry-pi-400-personal-computer-kit--us-keyboard-layout,99.99,In Stock,In stock,Pi 4,,Raspberry Pi,99.99,99.99,False,True,0.0
 2025-10-13,999004,Raspberry Pi Pico W,https://www.microcenter.com/product/653129/raspberry-pi-pico-w-microcontroller,7.99,In Stock,In stock,Pico,,Raspberry Pi,,7.99,False,True,
 2025-10-14,999004,Raspberry Pi Pico W,https://www.microcenter.com/product/653129/raspberry-pi-pico-w-microcontroller,7.99,In Stock,In stock,Pico,,Raspberry Pi,,7.99,False,True,
 2025-10-16,999004,Raspberry Pi Pico W,https://www.microcenter.com/product/653129/raspberry-pi-pico-w-microcontroller,7.99,In Stock,In stock,Pico,,Raspberry Pi,7.99,7.99,False,True,0.0
@@ -388,3 +391,4 @@ date,sku,name,url,price,stock,availability,model,memory_gb,brand,rolling_median,
 2025-11-08,999004,Raspberry Pi Pico W,https://www.microcenter.com/product/653129/raspberry-pi-pico-w-microcontroller,7.99,In Stock,In stock,Pico,,Raspberry Pi,7.99,7.99,False,True,0.0
 2025-11-09,999004,Raspberry Pi Pico W,https://www.microcenter.com/product/653129/raspberry-pi-pico-w-microcontroller,7.99,In Stock,In stock,Pico,,Raspberry Pi,7.99,7.99,False,True,0.0
 2025-11-10,999004,Raspberry Pi Pico W,https://www.microcenter.com/product/653129/raspberry-pi-pico-w-microcontroller,7.99,In Stock,In stock,Pico,,Raspberry Pi,7.99,7.99,False,True,0.0
+2025-11-11,999004,Raspberry Pi Pico W,https://www.microcenter.com/product/653129/raspberry-pi-pico-w-microcontroller,7.99,In Stock,In stock,Pico,,Raspberry Pi,7.99,7.99,False,True,0.0
