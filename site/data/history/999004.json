@@ -187,6 +187,12 @@
       "price": 7.99,
       "is_sale": false,
       "is_low": true
+    },
+    {
+      "date": "2025-11-15",
+      "price": 7.99,
+      "is_sale": false,
+      "is_low": true
     }
   ]
 }
