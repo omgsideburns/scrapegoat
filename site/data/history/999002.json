@@ -283,6 +283,12 @@
       "price": 79.99,
       "is_sale": false,
       "is_low": true
+    },
+    {
+      "date": "2025-11-30",
+      "price": 79.99,
+      "is_sale": false,
+      "is_low": true
     }
   ]
 }
