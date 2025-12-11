@@ -1,6 +1,6 @@
 ## Raspberry Pi Devices
 
-These are the prices at MicroCenter as of Dec 10 2025
+These are the prices at MicroCenter as of Dec 11 2025
 
 ### Raspberry Pi Boards
 
