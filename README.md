@@ -10,7 +10,7 @@ The current price table is displayed below.
 
 ## Raspberry Pi Devices
 
-These are the prices at MicroCenter as of Dec 22 2025
+These are the prices at MicroCenter as of Dec 23 2025
 
 ### Raspberry Pi Boards
 
