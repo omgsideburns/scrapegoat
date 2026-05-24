@@ -1,6 +1,6 @@
 ## Raspberry Pi Devices
 
-These are the prices at MicroCenter as of May 23 2026
+These are the prices at MicroCenter as of May 24 2026
 
 ### Raspberry Pi Boards
 
