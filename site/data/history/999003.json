@@ -1543,6 +1543,12 @@
       "price": 99.99,
       "is_sale": false,
       "is_low": true
+    },
+    {
+      "date": "2026-06-29",
+      "price": 99.99,
+      "is_sale": false,
+      "is_low": true
     }
   ]
 }
