@@ -1987,6 +1987,12 @@
       "price": 54.99,
       "is_sale": false,
       "is_low": true
+    },
+    {
+      "date": "2026-09-10",
+      "price": 54.99,
+      "is_sale": false,
+      "is_low": true
     }
   ]
 }
