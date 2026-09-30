@@ -2101,6 +2101,12 @@
       "price": 99.99,
       "is_sale": false,
       "is_low": true
+    },
+    {
+      "date": "2026-09-30",
+      "price": 99.99,
+      "is_sale": false,
+      "is_low": true
     }
   ]
 }
