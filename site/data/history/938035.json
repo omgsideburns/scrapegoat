@@ -1,6 +1,6 @@
 {
   "sku": "938035",
-  "name": "Raspberry Pi 5;  ARM Cortex A76 Quad Core Processor;  16GB LPDDR4X RAM",
+  "name": "Raspberry Pi 5 - 16GB;  ARM Cortex A76 Quad Core Processor;  16GB LPDDR4X RAM",
   "series": [
     {
       "date": "2025-10-13",
@@ -19,6 +19,12 @@
       "price": 99.99,
       "is_sale": false,
       "is_low": true
+    },
+    {
+      "date": "2026-10-29",
+      "price": 279.99,
+      "is_sale": false,
+      "is_low": false
     }
   ]
 }

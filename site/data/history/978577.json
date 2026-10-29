@@ -1,0 +1,12 @@
+{
+  "sku": "978577",
+  "name": "Raspberry Pi AI HAT 2",
+  "series": [
+    {
+      "date": "2026-10-29",
+      "price": 188.99,
+      "is_sale": false,
+      "is_low": true
+    }
+  ]
+}

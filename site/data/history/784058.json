@@ -1,6 +1,6 @@
 {
   "sku": "784058",
-  "name": "Raspberry Pi POE for Pi 3B and 4B",
+  "name": "Raspberry Pi POE for Pi 3B+ and 4",
   "series": [
     {
       "date": "2025-10-15",
@@ -10,6 +10,12 @@
     },
     {
       "date": "2025-11-06",
+      "price": 25.99,
+      "is_sale": false,
+      "is_low": true
+    },
+    {
+      "date": "2026-10-29",
       "price": 25.99,
       "is_sale": false,
       "is_low": true
