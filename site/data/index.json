@@ -76,15 +76,19 @@
     "name":"Raspberry Pi 4 Model B;  Broadcom BCM2711 Quad core Cortex-A72 (ARM v8) 64-bit SoC;  2GB DDR4 RAM"
   },
   {
+    "sku":"099838",
+    "name":"Raspberry Pi 4 Model B;  Broadcom BCM2711 Quad core Cortex-A72 (ARM v8) 64-bit SoC;  3GB DDR4 RAM"
+  },
+  {
     "sku":"278523",
     "name":"Raspberry Pi 4 Model B;  Broadcom BCM2711 Quad core Cortex-A72 (ARM v8) 64-bit SoC;  4GB DDR4 RAM"
   },
   {
-    "sku":"099788",
+    "sku":"99788",
     "name":"Raspberry Pi 4 Model B;  Broadcom BCM2711 Quad core Cortex-A72 (ARM v8) 64-bit SoC;  8GB DDR4 RAM"
   },
   {
-    "sku":"99788",
+    "sku":"099788",
     "name":"Raspberry Pi 4 Model B;  Broadcom BCM2711 Quad core Cortex-A72 (ARM v8) 64-bit SoC;  8GB DDR4 RAM"
   },
   {
@@ -344,19 +348,19 @@
     "name":"Raspberry Pi Official Raspberry Pi Zero Case - White\/Red"
   },
   {
-    "sku":"006791",
-    "name":"Raspberry Pi Official USB Keyboard with USB Hub - Black\/Gray"
-  },
-  {
     "sku":"6791",
     "name":"Raspberry Pi Official USB Keyboard with USB Hub - Black\/Gray"
   },
   {
-    "sku":"006783",
-    "name":"Raspberry Pi Official USB Keyboard with USB Hub - Red\/White"
+    "sku":"006791",
+    "name":"Raspberry Pi Official USB Keyboard with USB Hub - Black\/Gray"
   },
   {
     "sku":"6783",
+    "name":"Raspberry Pi Official USB Keyboard with USB Hub - Red\/White"
+  },
+  {
+    "sku":"006783",
     "name":"Raspberry Pi Official USB Keyboard with USB Hub - Red\/White"
   },
   {

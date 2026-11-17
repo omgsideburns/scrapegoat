@@ -1,6 +1,6 @@
 ## Raspberry Pi Devices
 
-These are the prices at MicroCenter as of Nov 16 2026
+These are the prices at MicroCenter as of Nov 17 2026
 
 ### Raspberry Pi Boards
 
@@ -9,11 +9,11 @@ These are the prices at MicroCenter as of Nov 16 2026
 |512MB|[*$7.99*](https://www.microcenter.com/product/486575/raspberry-pi-zero-w-microcontroller-development-board)|[*$14.99*](https://www.microcenter.com/product/643085/raspberry-pi-zero-2-w)|[*$24.99*](https://www.microcenter.com/product/514076/raspberry-pi-3-model-a-board)|x|x|
 |1GB|x|x|x|[*$34.99*](https://www.microcenter.com/product/665122/raspberry-pi-4-model-b)|[*$44.99*](https://www.microcenter.com/product/704295/raspberry-pi-5-1gb)|
 |2GB|x|x|x|[*$44.99*](https://www.microcenter.com/product/621439/raspberry-pi-4-model-b)|[*$77.99*](https://www.microcenter.com/product/683269/raspberry-pi-5)|
-|4GB|x|x|x|[*$94.99*](https://www.microcenter.com/product/637834/raspberry-pi-4-model-b)|[*$109.99*](https://www.microcenter.com/product/673712/raspberry-pi-5)|
+|4GB|x|x|x|[*$99.99*](https://www.microcenter.com/product/637834/raspberry-pi-4-model-b)|[*$109.99*](https://www.microcenter.com/product/673712/raspberry-pi-5)|
 |8GB|x|x|x|[*$74.99*](https://www.microcenter.com/product/622539/raspberry-pi-4-model-b)|[*$79.99*](https://www.microcenter.com/product/700975/raspberry-pi-5-8gb-single-board-computer)|
 |16GB|x|x|x|x|[*$279.99*](https://www.microcenter.com/product/702590/raspberry-pi-5-16gb)|
 
-Key: ~~price~~ = sold out/out of stock; *price* = in-store only / pickup.
+Key: *price* = in-store only / pickup.
 
 <sup>1.</sup> Add $1.00 for a Zero with pre-soldered headers.
 
@@ -53,8 +53,8 @@ Key: ~~price~~ = sold out/out of stock; *price* = in-store only / pickup.
 |$99.99|In Stock|[Link](https://www.microcenter.com/product/630737/raspberry-pi-400-personal-computer-kit--us-keyboard-layout)|Raspberry Pi 400 Personal Computer Kit|
 |$179.99|In Stock|[Link](https://www.microcenter.com/product/688716/raspberry-pi-500-unit-only)|Raspberry Pi 500 - Unit Only|
 |$199.99|In Stock|[Link](https://www.microcenter.com/product/688717/raspberry-pi-500-kit)|Raspberry Pi 500 Kit|
-|*$319.99*|Buy In Store|[Link](https://www.microcenter.com/product/699777/raspberry-pi-500-plus)|Raspberry Pi 500 PLUS|
-|*$369.99*|Buy In Store|[Link](https://www.microcenter.com/product/699778/raspberry-pi-500-plus-kit)|Raspberry Pi 500 PLUS Kit|
+|*$299.99*|Buy In Store|[Link](https://www.microcenter.com/product/699777/raspberry-pi-500-plus)|Raspberry Pi 500 PLUS|
+|*$429.99*|Buy In Store|[Link](https://www.microcenter.com/product/699778/raspberry-pi-500-plus-kit)|Raspberry Pi 500 PLUS Kit|
 
 ### Cameras
 
@@ -98,7 +98,7 @@ Key: ~~price~~ = sold out/out of stock; *price* = in-store only / pickup.
 |$54.99|In Stock|[Link](https://www.microcenter.com/product/697845/raspberry-pi-touch-display-2-(5-portrait))|Raspberry Pi Touch Display 2 (5" Portrait)|
 |$59.99|In Stock|[Link](https://www.microcenter.com/product/689848/raspberry-pi-7-pi-touchscreen-lcd-display)|Raspberry Pi 7" Pi Touchscreen LCD Display|
 |$99.99|In Stock|[Link](https://www.microcenter.com/product/687338/raspberry-pi-touch-display-2)|Raspberry Pi Touch Display 2|
-|*$99.99*|Buy In Store|[Link](https://www.microcenter.com/product/713400/raspberry-pi-raspberry-pi-touch-display-2-101)|Raspberry Pi Raspberry Pi Touch Display 2 10.1"|
+|$99.99|In Stock|[Link](https://www.microcenter.com/product/713400/raspberry-pi-raspberry-pi-touch-display-2-101)|Raspberry Pi Raspberry Pi Touch Display 2 10.1"|
 |$99.99|In Stock|[Link](https://www.microcenter.com/product/687351/raspberry-pi-156-in-full-hd-ips-monitor)|Raspberry Pi 15.6 in Full HD IPS Monitor|
 
 ### Storage
