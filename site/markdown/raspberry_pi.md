@@ -1,6 +1,6 @@
 ## Raspberry Pi Devices
 
-These are the prices at MicroCenter as of Nov 22 2026
+These are the prices at MicroCenter as of Nov 23 2026
 
 ### Raspberry Pi Boards
 
@@ -41,7 +41,7 @@ Key: *price* = in-store only / pickup.
 |*$4.99*|Buy In Store|[Link](https://www.microcenter.com/product/692333/raspberry-pi-pico-2-with-header)|Raspberry Pi Pico 2 with Header<br>Dual ARM Cortex M33 Processor<br>520KB RAM|
 |*$5.99*|Buy In Store|[Link](https://www.microcenter.com/product/650109/raspberry-pi-pico-wh-pico-wireless-with-headers-soldered)|Raspberry Pi Pico WH - Pico Wireless with Headers Soldered<br>RP2040 32-bit Cortex M0+ Dual Core Processor<br>264KB RAM|
 |*$5.99*|Buy In Store|[Link](https://www.microcenter.com/product/687384/raspberry-pi-pico-2-w)|Raspberry Pi Pico 2 W|
-|*$6.99*|Buy In Store|[Link](https://www.microcenter.com/product/692334/raspberry-pi-pico-2w-with-header)|Raspberry Pi Pico 2W with Header|
+|$6.99|In Stock|[Link](https://www.microcenter.com/product/692334/raspberry-pi-pico-2w-with-header)|Raspberry Pi Pico 2W with Header|
 |$7.99|In Stock|[Link](https://www.microcenter.com/product/653129/raspberry-pi-pico-w-microcontroller)|Raspberry Pi Pico W|
 
 ### Raspberry Pi 400/500 Kits
@@ -123,7 +123,7 @@ Key: *price* = in-store only / pickup.
 |*$4.99*|Buy In Store|[Link](https://www.microcenter.com/product/650108/raspberry-pi-pico-w)|Raspberry Pi Pico W<br>RP2040 32-bit Cortex M0+ Dual Core Processor<br>264KB RAM|
 |*$4.99*|Buy In Store|[Link](https://www.microcenter.com/product/692333/raspberry-pi-pico-2-with-header)|Raspberry Pi Pico 2 with Header<br>Dual ARM Cortex M33 Processor<br>520KB RAM|
 |*$5.99*|Buy In Store|[Link](https://www.microcenter.com/product/687384/raspberry-pi-pico-2-w)|Raspberry Pi Pico 2 W|
-|*$6.99*|Buy In Store|[Link](https://www.microcenter.com/product/692334/raspberry-pi-pico-2w-with-header)|Raspberry Pi Pico 2W with Header|
+|$6.99|In Stock|[Link](https://www.microcenter.com/product/692334/raspberry-pi-pico-2w-with-header)|Raspberry Pi Pico 2W with Header|
 |$6.99|In Stock|[Link](https://www.microcenter.com/product/690851/raspberry-pi-micro-hdmi-male-to-hdmi-female-adapter-(23cm)-white)|Raspberry Pi Micro HDMI Male to HDMI Female Adapter (23cm) - White|
 |$7.99|In Stock|[Link](https://www.microcenter.com/product/613559/raspberry-pi-official-raspberry-pi-optical-usb-mouse-black-grey)|Raspberry Pi Official Raspberry Pi Optical USB Mouse - Black/Grey|
 |$7.99|In Stock|[Link](https://www.microcenter.com/product/613558/raspberry-pi-official-raspberry-pi-optical-usb-mouse-red-white)|Raspberry Pi Official Raspberry Pi Optical USB Mouse - Red/White|

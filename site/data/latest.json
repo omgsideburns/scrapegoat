@@ -928,8 +928,8 @@
     "name":"Raspberry Pi Pico 2W with Header",
     "url":"https:\/\/www.microcenter.com\/product\/692334\/raspberry-pi-pico-2w-with-header",
     "price":6.99,
-    "stock":"Buy In Store",
-    "availability":"In-Store Pickup",
+    "stock":"In Stock",
+    "availability":"Usually ships",
     "model":"Pico 2",
     "memory_gb":null,
     "brand":"Raspberry Pi"
