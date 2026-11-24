@@ -1,0 +1,12 @@
+{
+  "sku": "993949",
+  "name": "Raspberry Pi Zero (V1.3)",
+  "series": [
+    {
+      "date": "2026-11-24",
+      "price": 9.99,
+      "is_sale": false,
+      "is_low": true
+    }
+  ]
+}

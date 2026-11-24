@@ -1,6 +1,6 @@
 ## Raspberry Pi Devices
 
-These are the prices at MicroCenter as of Nov 23 2026
+These are the prices at MicroCenter as of Nov 24 2026
 
 ### Raspberry Pi Boards
 
@@ -11,7 +11,7 @@ These are the prices at MicroCenter as of Nov 23 2026
 |2GB|x|x|x|[*$44.99*](https://www.microcenter.com/product/621439/raspberry-pi-4-model-b)|[*$77.99*](https://www.microcenter.com/product/683269/raspberry-pi-5)|
 |4GB|x|x|x|[*$99.99*](https://www.microcenter.com/product/637834/raspberry-pi-4-model-b)|[*$109.99*](https://www.microcenter.com/product/673712/raspberry-pi-5)|
 |8GB|x|x|x|[*$74.99*](https://www.microcenter.com/product/622539/raspberry-pi-4-model-b)|[*$79.99*](https://www.microcenter.com/product/700975/raspberry-pi-5-8gb-single-board-computer)|
-|16GB|x|x|x|x|[*$279.99*](https://www.microcenter.com/product/702590/raspberry-pi-5-16gb)|
+|16GB|x|x|x|x|[*$229.99*](https://www.microcenter.com/product/702590/raspberry-pi-5-16gb)|
 
 Key: *price* = in-store only / pickup.
 
