@@ -1,6 +1,6 @@
 ## Raspberry Pi Devices
 
-These are the prices at MicroCenter as of Nov 24 2026
+These are the prices at MicroCenter as of Nov 25 2026
 
 ### Raspberry Pi Boards
 
@@ -132,17 +132,16 @@ Key: *price* = in-store only / pickup.
 |$7.99|In Stock|[Link](https://www.microcenter.com/product/653129/raspberry-pi-pico-w-microcontroller)|Raspberry Pi Pico W|
 |$7.99|In Stock|[Link](https://www.microcenter.com/product/608177/raspberry-pi-micro-hdmi-to-standard-hdmi-(a-m),-1m-cable)|Raspberry Pi Micro-HDMI to Standard HDMI (A/M), 1m cable|
 |*$9.99*|Buy In Store|[Link](https://www.microcenter.com/product/627907/raspberry-pi-ceramic-mug)|Raspberry Pi Ceramic Mug|
-|$9.99|In Stock|[Link](https://www.microcenter.com/product/704857/raspberry-pi-zero-(v13))|Raspberry Pi Zero (V1.3)|
 |$11.99|In Stock|[Link](https://www.microcenter.com/product/663804/raspberry-pi-debug-probe)|Raspberry Pi Debug Probe|
 |*$14.99*|Buy In Store|[Link](https://www.microcenter.com/product/697844/raspberry-pi-m2-hat-(compact))|Raspberry Pi M.2 HAT+ (Compact)|
 |$14.99|In Stock|[Link](https://www.microcenter.com/product/683363/raspberry-pi-usb-30-hub-usb-c)|Raspberry Pi USB 3.0 Hub USB C|
 |$16.99|In Stock|[Link](https://www.microcenter.com/product/613557/raspberry-pi-official-usb-keyboard-with-usb-hub-black-gray)|Raspberry Pi Official USB Keyboard with USB Hub - Black/Gray|
-|$16.99|In Stock|[Link](https://www.microcenter.com/product/613556/raspberry-pi-official-usb-keyboard-with-usb-hub-red-white)|Raspberry Pi Official USB Keyboard with USB Hub - Red/White|
 |$16.99|In Stock|[Link](https://www.microcenter.com/product/613557/raspberry-pi-official-usb-keyboard-with-usb-hub-black-gray)|Raspberry Pi Official USB Keyboard with USB Hub - Black/Gray|
 |$16.99|In Stock|[Link](https://www.microcenter.com/product/613556/raspberry-pi-official-usb-keyboard-with-usb-hub-red-white)|Raspberry Pi Official USB Keyboard with USB Hub - Red/White|
+|$16.99|In Stock|[Link](https://www.microcenter.com/product/613556/raspberry-pi-official-usb-keyboard-with-usb-hub-red-white)|Raspberry Pi Official USB Keyboard with USB Hub - Red/White|
 |$24.99|In Stock|[Link](https://www.microcenter.com/product/671941/raspberry-pi-the-official-raspberry-pi-beginners-guide-how-to-use-your-new-computer)|Raspberry Pi The Official Raspberry Pi Beginner's Guide: How to use your new computer|
-|$29.99|In Stock|[Link](https://www.microcenter.com/product/631851/raspberry-pi-digiamp)|Raspberry Pi DigiAMP|
 |$29.99|In Stock|[Link](https://www.microcenter.com/product/681577/raspberry-pi-sense-hat)|Raspberry Pi Sense HAT|
+|$29.99|In Stock|[Link](https://www.microcenter.com/product/631851/raspberry-pi-digiamp)|Raspberry Pi DigiAMP|
 |$37.99|In Stock|[Link](https://www.microcenter.com/product/662052/raspberry-pi-m12-lens)|Raspberry Pi M12 Lens<br>12 Megapixel<br>8mm<br>…|
 |$39.99|In Stock|[Link](https://www.microcenter.com/product/662035/raspberry-pi-hq-lens-m12)|Raspberry Pi HQ Lens M12<br>12 Megapixel<br>Wide Angle Lens|
 |$54.99|In Stock|[Link](https://www.microcenter.com/product/622539/raspberry-pi-4-model-b-4gb-single-board-computer)|Raspberry Pi 4 4GB Board|
@@ -150,3 +149,4 @@ Key: *price* = in-store only / pickup.
 |$109.99|In Stock|[Link](https://www.microcenter.com/product/687348/raspberry-pi-ai-hat-26-tops)|Raspberry Pi AI Hat 26 Tops|
 |$188.99|In Stock|[Link](https://www.microcenter.com/product/705302/raspberry-pi-ai-hat-2)|Raspberry Pi AI HAT 2|
 |~~$826883.00~~|Out of Stock|[Link](https://www.microcenter.com/product/690851/raspberry-pi-micro-hdmi-male-to-hdmi-female-adapter-(23cm)-white)|Raspberry Pi Micro HDMI Male to HDMI Female Adapter (23cm) - White|
+|~~$993949.00~~|Out of Stock|[Link](https://www.microcenter.com/product/704857/raspberry-pi-zero-(v13))|Raspberry Pi Zero (V1.3)|

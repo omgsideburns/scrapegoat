@@ -1202,9 +1202,9 @@
     "sku":"993949",
     "name":"Raspberry Pi Zero (V1.3)",
     "url":"https:\/\/www.microcenter.com\/product\/704857\/raspberry-pi-zero-(v13)",
-    "price":9.99,
-    "stock":"In Stock",
-    "availability":"Usually ships",
+    "price":993949.0,
+    "stock":"Out of Stock",
+    "availability":"SOLD OUT",
     "model":"Accessory",
     "memory_gb":null,
     "brand":"Raspberry Pi"
