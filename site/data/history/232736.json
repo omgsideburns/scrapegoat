@@ -43,6 +43,12 @@
       "price": 29.99,
       "is_sale": true,
       "is_low": true
+    },
+    {
+      "date": "2026-11-27",
+      "price": 29.99,
+      "is_sale": true,
+      "is_low": true
     }
   ]
 }

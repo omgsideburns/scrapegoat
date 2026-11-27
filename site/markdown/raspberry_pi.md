@@ -1,6 +1,6 @@
 ## Raspberry Pi Devices
 
-These are the prices at MicroCenter as of Nov 26 2026
+These are the prices at MicroCenter as of Nov 27 2026
 
 ### Raspberry Pi Boards
 
@@ -53,7 +53,7 @@ Key: *price* = in-store only / pickup.
 |$99.99|In Stock|[Link](https://www.microcenter.com/product/630737/raspberry-pi-400-personal-computer-kit--us-keyboard-layout)|Raspberry Pi 400 Personal Computer Kit|
 |$179.99|In Stock|[Link](https://www.microcenter.com/product/688716/raspberry-pi-500-unit-only)|Raspberry Pi 500 - Unit Only|
 |$199.99|In Stock|[Link](https://www.microcenter.com/product/688717/raspberry-pi-500-kit)|Raspberry Pi 500 Kit|
-|*$299.99*|Buy In Store|[Link](https://www.microcenter.com/product/699777/raspberry-pi-500-plus)|Raspberry Pi 500 PLUS|
+|*$409.99*|Buy In Store|[Link](https://www.microcenter.com/product/699777/raspberry-pi-500-plus)|Raspberry Pi 500 PLUS|
 |*$429.99*|Buy In Store|[Link](https://www.microcenter.com/product/699778/raspberry-pi-500-plus-kit)|Raspberry Pi 500 PLUS Kit|
 
 ### Cameras
@@ -61,7 +61,6 @@ Key: *price* = in-store only / pickup.
 |Price|Stock|Link|Description|
 |-:|:-|:-:|:-|
 |$18.99|In Stock|[Link](https://www.microcenter.com/product/662034/raspberry-pi-camera-lens-5mp-25mm)|Raspberry Pi Camera Lens 5MP 25MM|
-|$27.99|In Stock|[Link](https://www.microcenter.com/product/662017/raspberry-pi-camera-3-noir)|Raspberry Pi Camera 3 NoIR|
 |$33.99|In Stock|[Link](https://www.microcenter.com/product/662016/raspberry-pi-camera-3)|Raspberry Pi Camera 3|
 |*$34.99*|Buy In Store|[Link](https://www.microcenter.com/product/662018/raspberry-pi-camera-3-wide)|Raspberry Pi Camera 3 Wide|
 |$34.99|In Stock|[Link](https://www.microcenter.com/product/662019/raspberry-pi-camera-3-wide-noir)|Raspberry Pi Camera 3 Wide NoIR|
@@ -70,6 +69,7 @@ Key: *price* = in-store only / pickup.
 |$77.99|In Stock|[Link](https://www.microcenter.com/product/683271/raspberry-pi-ai-camera)|Raspberry Pi AI Camera|
 |*$78.99*|Buy In Store|[Link](https://www.microcenter.com/product/621304/raspberry-pi-16mm-telephoto-lens-for-hq-camera)|Raspberry Pi 16mm Telephoto Lens for HQ Camera<br>16mm Focal length<br>F1.4 - 16 Aperture|
 |*$78.99*|Buy In Store|[Link](https://www.microcenter.com/product/621304/raspberry-pi-16mm-telephoto-lens-for-hq-camera)|Raspberry Pi 16mm Telephoto Lens for HQ Camera<br>16mm Focal length<br>F1.4 - 16 Aperture|
+|~~$531905.00~~|Out of Stock|[Link](https://www.microcenter.com/product/662017/raspberry-pi-camera-3-noir)|Raspberry Pi Camera 3 NoIR|
 |~~$548610.00~~|Out of Stock|[Link](https://www.microcenter.com/product/663805/raspberry-pi-global-shutter-camera)|Raspberry Pi Global Shutter Camera|
 
 ### Cases
