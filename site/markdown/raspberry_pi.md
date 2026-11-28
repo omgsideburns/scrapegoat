@@ -1,6 +1,6 @@
 ## Raspberry Pi Devices
 
-These are the prices at MicroCenter as of Nov 27 2026
+These are the prices at MicroCenter as of Nov 28 2026
 
 ### Raspberry Pi Boards
 
@@ -61,6 +61,7 @@ Key: *price* = in-store only / pickup.
 |Price|Stock|Link|Description|
 |-:|:-|:-:|:-|
 |$18.99|In Stock|[Link](https://www.microcenter.com/product/662034/raspberry-pi-camera-lens-5mp-25mm)|Raspberry Pi Camera Lens 5MP 25MM|
+|*$27.99*|Buy In Store|[Link](https://www.microcenter.com/product/662017/raspberry-pi-camera-3-noir)|Raspberry Pi Camera 3 NoIR|
 |$33.99|In Stock|[Link](https://www.microcenter.com/product/662016/raspberry-pi-camera-3)|Raspberry Pi Camera 3|
 |*$34.99*|Buy In Store|[Link](https://www.microcenter.com/product/662018/raspberry-pi-camera-3-wide)|Raspberry Pi Camera 3 Wide|
 |$34.99|In Stock|[Link](https://www.microcenter.com/product/662019/raspberry-pi-camera-3-wide-noir)|Raspberry Pi Camera 3 Wide NoIR|
@@ -69,7 +70,6 @@ Key: *price* = in-store only / pickup.
 |$77.99|In Stock|[Link](https://www.microcenter.com/product/683271/raspberry-pi-ai-camera)|Raspberry Pi AI Camera|
 |*$78.99*|Buy In Store|[Link](https://www.microcenter.com/product/621304/raspberry-pi-16mm-telephoto-lens-for-hq-camera)|Raspberry Pi 16mm Telephoto Lens for HQ Camera<br>16mm Focal length<br>F1.4 - 16 Aperture|
 |*$78.99*|Buy In Store|[Link](https://www.microcenter.com/product/621304/raspberry-pi-16mm-telephoto-lens-for-hq-camera)|Raspberry Pi 16mm Telephoto Lens for HQ Camera<br>16mm Focal length<br>F1.4 - 16 Aperture|
-|~~$531905.00~~|Out of Stock|[Link](https://www.microcenter.com/product/662017/raspberry-pi-camera-3-noir)|Raspberry Pi Camera 3 NoIR|
 |~~$548610.00~~|Out of Stock|[Link](https://www.microcenter.com/product/663805/raspberry-pi-global-shutter-camera)|Raspberry Pi Global Shutter Camera|
 
 ### Cases
@@ -80,7 +80,7 @@ Key: *price* = in-store only / pickup.
 |$4.99|In Stock|[Link](https://www.microcenter.com/product/486577/raspberry-pi-official-raspberry-pi-zero-case-white-red)|Raspberry Pi Official Raspberry Pi Zero Case - White/Red|
 |$4.99|In Stock|[Link](https://www.microcenter.com/product/608178/raspberry-pi-4-official-case-red-white)|Raspberry Pi 4 Official Case - Red/White|
 |$4.99|In Stock|[Link](https://www.microcenter.com/product/608179/raspberry-pi-4-official-case-black-gray)|Raspberry Pi 4 Official Case - Black/Gray|
-|$8.99|In Stock|[Link](https://www.microcenter.com/product/461222/raspberry-pi-model-3-model-b-case)|Raspberry Pi Model 3 Model B Case|
+|*$8.99*|Buy In Store|[Link](https://www.microcenter.com/product/461222/raspberry-pi-model-3-model-b-case)|Raspberry Pi Model 3 Model B Case|
 
 ### Kits
 
@@ -133,9 +133,10 @@ Key: *price* = in-store only / pickup.
 |$7.99|In Stock|[Link](https://www.microcenter.com/product/608177/raspberry-pi-micro-hdmi-to-standard-hdmi-(a-m),-1m-cable)|Raspberry Pi Micro-HDMI to Standard HDMI (A/M), 1m cable|
 |$7.99|In Stock|[Link](https://www.microcenter.com/product/653129/raspberry-pi-pico-w-microcontroller)|Raspberry Pi Pico W|
 |*$9.99*|Buy In Store|[Link](https://www.microcenter.com/product/627907/raspberry-pi-ceramic-mug)|Raspberry Pi Ceramic Mug|
+|*$9.99*|Buy In Store|[Link](https://www.microcenter.com/product/704857/raspberry-pi-zero-(v13))|Raspberry Pi Zero (V1.3)|
 |$11.99|In Stock|[Link](https://www.microcenter.com/product/663804/raspberry-pi-debug-probe)|Raspberry Pi Debug Probe|
-|$14.99|In Stock|[Link](https://www.microcenter.com/product/683363/raspberry-pi-usb-30-hub-usb-c)|Raspberry Pi USB 3.0 Hub USB C|
 |*$14.99*|Buy In Store|[Link](https://www.microcenter.com/product/697844/raspberry-pi-m2-hat-(compact))|Raspberry Pi M.2 HAT+ (Compact)|
+|$14.99|In Stock|[Link](https://www.microcenter.com/product/683363/raspberry-pi-usb-30-hub-usb-c)|Raspberry Pi USB 3.0 Hub USB C|
 |$16.99|In Stock|[Link](https://www.microcenter.com/product/613557/raspberry-pi-official-usb-keyboard-with-usb-hub-black-gray)|Raspberry Pi Official USB Keyboard with USB Hub - Black/Gray|
 |$16.99|In Stock|[Link](https://www.microcenter.com/product/613557/raspberry-pi-official-usb-keyboard-with-usb-hub-black-gray)|Raspberry Pi Official USB Keyboard with USB Hub - Black/Gray|
 |$16.99|In Stock|[Link](https://www.microcenter.com/product/613556/raspberry-pi-official-usb-keyboard-with-usb-hub-red-white)|Raspberry Pi Official USB Keyboard with USB Hub - Red/White|
@@ -149,4 +150,3 @@ Key: *price* = in-store only / pickup.
 |$69.99|In Stock|[Link](https://www.microcenter.com/product/687346/raspberry-pi-ai-hat-plus-13-tops)|Raspberry Pi AI Hat Plus 13 TOPS|
 |$109.99|In Stock|[Link](https://www.microcenter.com/product/687348/raspberry-pi-ai-hat-26-tops)|Raspberry Pi AI Hat 26 Tops|
 |$188.99|In Stock|[Link](https://www.microcenter.com/product/705302/raspberry-pi-ai-hat-2)|Raspberry Pi AI HAT 2|
-|~~$993949.00~~|Out of Stock|[Link](https://www.microcenter.com/product/704857/raspberry-pi-zero-(v13))|Raspberry Pi Zero (V1.3)|
